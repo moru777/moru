@@ -1,0 +1,2 @@
+# moru
+my static-site
