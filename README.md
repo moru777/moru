@@ -44,8 +44,7 @@ We aim to:
 ---
 
 ## 📫 Contact  
-If you want to connect or share your thoughts, reach out to me at: **your-email@example.com**  
-*(Replace with your actual email address)*  
+If you want to connect or share your thoughts, reach out to me at: **moruwilliam@proton.me**   
 
 Together, let's build a **secure future for Africa!** 🌍🔐  
 
