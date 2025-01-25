@@ -1,17 +1,29 @@
+/* Cybersecurity-Themed Color Scheme */
+
+:root {
+    --primary-bg: #0D1117; /* Dark blue/black background */
+    --secondary-bg: #1A1A2E; /* Slightly lighter dark blue */
+    --text-color: #E0E0E0; /* Light gray for readability */
+    --accent-green: #00FF41; /* Neon green (hacker-style) */
+    --accent-blue: #008CFF; /* Electric blue */
+    --alert-red: #FF3131; /* Bright red for warnings */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--primary-bg);
 }
 
 header {
-    background: #007acc;
-    color: #fff;
+    background: var(--secondary-bg);
+    color: var(--accent-green);
     padding: 20px 10px;
     text-align: center;
+    border-bottom: 2px solid var(--accent-green);
 }
 
 nav ul {
@@ -28,21 +40,90 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #007acc;
+    color: var(--accent-green);
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #005999;
+    color: var(--accent-blue);
 }
 
 main {
-    padding: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: var(--secondary-bg);
+    color: var(--text-color);
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
+    border-top: 2px solid var(--accent-green);
+}
+
+/* Content Section Styling */
+.content-section {
+    background-color: #181A25;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+ul li strong {
+    color: var(--accent-blue);
+}
+
+/* Image Styling */
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to Home Link Styling */
+.back-to-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home a {
+    text-decoration: none;
+    color: var(--accent-blue);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-to-home a:hover {
+    color: var(--accent-green);
 }

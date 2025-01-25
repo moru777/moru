@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleSection() {
+            var selectedOption = document.getElementById("resourceDropdown").value;
+            var sections = document.getElementsByClassName("resource-content");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            if (selectedOption) {
+                document.getElementById(selectedOption).style.display = "block";
+            }
+        }
+    </script>
+    <style>
+        .resource-menu {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .dropdown-container {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-container select {
+            padding: 12px;
+            font-size: 16px;
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .dropdown-container select:hover {
+            background-color: var(--accent-green);
+        }
+        .resource-content {
+            display: none;
+            padding: 20px;
+            background: var(--secondary-bg);
+            color: var(--text-color);
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s ease-in-out;
+        }
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-home a {
+            padding: 12px 18px;
+            background-color: var(--accent-green);
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .back-home a:hover {
+            background-color: var(--accent-blue);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resources</h1>
+    </header>
+
+    <main>
+        <div class="resource-menu">
+            <label for="resourceDropdown">Choose a Resource: </label>
+            <div class="dropdown-container">
+                <select id="resourceDropdown" onchange="toggleSection()">
+                    <option value="">-- Select --</option>
+                    <option value="events">Cybersecurity Events</option>
+                    <option value="blogs">Blogs</option>
+                    <option value="ebooks">Ebooks</option>
+                </select>
+            </div>
+        </div>
+
+        <section id="events" class="resource-content">
+            <h2>Cybersecurity Events</h2>
+            <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening around the world.</p>
+        </section>
+
+        <section id="blogs" class="resource-content">
+            <h2>Blogs</h2>
+            <p>Explore insightful articles and industry news from top cybersecurity professionals.</p>
+            <ul>
+                <li><a href="blog-1.html">What is Cybersecurity?</a></li>
+                <!-- Add more blog links here as needed -->
+            </ul>
+        </section>
+
+        <section id="ebooks" class="resource-content">
+            <h2>Ebooks</h2>
+            <p>Download free and premium eBooks covering various aspects of cybersecurity.</p>
+        </section>
+
+        <div class="back-home">
+            <a href="index.html">&larr; Go Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
+    </footer>
+</body>
+</html>

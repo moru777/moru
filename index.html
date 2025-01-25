@@ -5,6 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity in Africa</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling for in-page anchors
+            document.querySelectorAll("nav ul li a[href^='#']").forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70, // Adjust for sticky nav
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // Sticky navigation bar
+            const nav = document.querySelector("nav");
+            const header = document.querySelector("header");
+            const navOffset = nav.offsetTop;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > navOffset) {
+                    nav.classList.add("sticky");
+                } else {
+                    nav.classList.remove("sticky");
+                }
+            });
+        });
+    </script>
+    <style>
+        :root {
+            --primary-bg: #0D1117; /* Dark blue/black background */
+            --secondary-bg: #1A1A2E; /* Slightly lighter dark blue */
+            --text-color: #E0E0E0; /* Light gray for readability */
+            --accent-green: #00FF41; /* Neon green (hacker-style) */
+            --accent-blue: #008CFF; /* Electric blue */
+            --accent-dark: #003D73; /* Darker blue for sticky nav */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--primary-bg);
+        }
+
+        header {
+            background: var(--secondary-bg);
+            color: var(--accent-green);
+            text-align: center;
+            padding: 50px 10px; /* Add space to prevent overlap with sticky nav */
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--accent-blue);
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+            z-index: 1000; /* Ensure nav is on top */
+            transition: background 0.3s;
+        }
+
+        nav.sticky {
+            background: var(--accent-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px; /* Rounded hover effect */
+            transition: color 0.3s, background 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-green);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        main {
+            padding: 90px 20px 20px; /* Add padding to avoid nav overlap */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--secondary-bg);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center; /* Center the image */
+            margin-bottom: 20px; /* Add space below the image */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Optional: Adds rounded corners to the image */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,17 +144,38 @@
             <li><a href="about.html">About</a></li>
             <li><a href="challenges.html">Challenges</a></li>
             <li><a href="tools.html">Tools</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contacts.html">Contact</a></li>
         </ul>
     </nav>
 
     <main>
         <section>
+            <!-- Image at the start of the section -->
+            <div class="image-container">
+                <img src="images/africa.jpg" alt="Cybersecurity in Africa">
+            </div>
+            
             <h2>Welcome to Our Cybersecurity Page</h2>
             <p>
                 This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. 
-                Despite facing numerous challenges, we remain committed to creating secure environments and 
-                systems, relying entirely on open-source tools.
+                Across the continent, talented individuals are stepping up to confront modern-day security 
+                threats with creativity, resilience, and resourcefulness.
+            </p>
+            <p>
+                Despite facing numerous challenges, such as limited access to advanced tools, funding 
+                constraints, and a lack of widespread infrastructure, we remain steadfast in our commitment 
+                to building secure environments and systems.
+            </p>
+            <p>
+                By relying entirely on open-source tools, we prove that innovation and expertise can thrive 
+                even in resource-limited settings. Our goal is to inspire the next generation of African 
+                cybersecurity professionals, raise awareness of digital threats, and foster collaboration 
+                within the community.
+            </p>
+            <p>
+                Together, we are shaping a future where Africa becomes a global leader in cybersecurity, driven 
+                by a united effort to create a safer and more secure digital landscape.
             </p>
         </section>
     </main>
