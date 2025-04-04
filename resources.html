@@ -16,32 +16,17 @@
                 document.getElementById(selectedOption).style.display = "block";
             }
         }
-
-        // Set default visible section on load
-        window.onload = function() {
-            document.getElementById("events").style.display = "block"; // Show Cybersecurity Events by default
-        };
     </script>
     <style>
-        /* Custom CSS Variables (You can adjust these values as needed) */
-        :root {
-            --accent-blue: #5684D4;
-            --accent-green: #3CAF5F;
-            --secondary-bg: #F8F9FB;
-            --text-color: #333;
-        }
-
         .resource-menu {
             text-align: center;
             margin: 20px 0;
             position: relative;
         }
-
         .dropdown-container {
             display: inline-block;
             position: relative;
         }
-
         .dropdown-container select {
             padding: 12px;
             font-size: 16px;
@@ -52,11 +37,9 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
-
         .dropdown-container select:hover {
             background-color: var(--accent-green);
         }
-
         .resource-content {
             display: none;
             padding: 20px;
@@ -67,12 +50,10 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: opacity 0.5s ease-in-out;
         }
-
         .back-home {
             text-align: center;
             margin-top: 20px;
         }
-
         .back-home a {
             padding: 12px 18px;
             background-color: var(--accent-green);
@@ -82,26 +63,21 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
-
         .back-home a:hover {
             background-color: var(--accent-blue);
         }
-
         ul {
             list-style: none;
             padding: 0;
         }
-
         ul li {
             margin: 10px 0;
         }
-
         ul li a {
             color: var(--text-color);
             text-decoration: none;
             font-weight: bold;
         }
-
         ul li a:hover {
             text-decoration: underline;
         }
