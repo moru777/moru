@@ -6,6 +6,7 @@
     <title>Resources</title>
     <link rel="stylesheet" href="css/styles.css">
     <script>
+        // Function to toggle the sections based on the dropdown selection
         function toggleSection() {
             var selectedOption = document.getElementById("resourceDropdown").value;
             var sections = document.getElementsByClassName("resource-content");
@@ -16,6 +17,46 @@
                 document.getElementById(selectedOption).style.display = "block";
             }
         }
+
+        // Simulate fetching data for African Cybersecurity Events
+        function fetchCybersecurityEvents() {
+            const events = [
+                {
+                    name: "CyberAfrica Conference 2025",
+                    url: "https://www.cyberafrica.com",
+                    date: "March 15, 2025",
+                    location: "Kigali, Rwanda"
+                },
+                {
+                    name: "Africa Cybersecurity Summit",
+                    url: "https://www.africacybersec.org",
+                    date: "June 20, 2025",
+                    location: "Nairobi, Kenya"
+                },
+                {
+                    name: "Cybersecurity East Africa 2025",
+                    url: "https://www.cybersec-ea.com",
+                    date: "August 12, 2025",
+                    location: "Dar Es Salaam, Tanzania"
+                },
+                {
+                    name: "West African Cybersecurity Forum",
+                    url: "https://www.wacsec.com",
+                    date: "September 8, 2025",
+                    location: "Lagos, Nigeria"
+                }
+            ];
+
+            const eventList = document.getElementById("eventList");
+            events.forEach(event => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<a href="${event.url}" target="_blank" rel="noopener">${event.name}</a><br><small>${event.date} - ${event.location}</small>`;
+                eventList.appendChild(listItem);
+            });
+        }
+
+        // Call the function when the page loads
+        window.onload = fetchCybersecurityEvents;
     </script>
     <style>
         .resource-menu {
@@ -101,9 +142,13 @@
             </div>
         </div>
 
+        <!-- UPDATED EVENTS SECTION WITH DYNAMIC CONTENT -->
         <section id="events" class="resource-content">
-            <h2>Cybersecurity Events</h2>
-            <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening around the world.</p>
+            <h2>Cybersecurity Events in Africa</h2>
+            <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening across Africa:</p>
+            <ul id="eventList">
+                <!-- Event list will be dynamically populated here -->
+            </ul>
         </section>
 
         <section id="blogs" class="resource-content">
@@ -111,8 +156,7 @@
             <p>Explore insightful articles and industry news from top cybersecurity professionals.</p>
             <ul>
                 <li><a href="cyber1.html">What is Cybersecurity?</a></li>
-                 <li><a href="tools.html">Cybersecurity Tools Types</a></li>
-                <!-- Add more blog links here as needed -->
+                <li><a href="tools.html">Cybersecurity Tools Types</a></li>
             </ul>
         </section>
 
@@ -122,7 +166,7 @@
         </section>
 
         <div class="back-home">
-            <a href="index.html">&larr; Go Back to Home</a>
+            <a href="resources.html">&larr; Go Resources to Home</a>
         </div>
     </main>
 
