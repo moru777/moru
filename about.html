@@ -23,20 +23,6 @@
         header h1 {
             margin: 0;
         }
-        .back-home {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .back-home:hover {
-            background-color: #45a049;
-        }
         main {
             display: flex;
             flex-direction: row;
@@ -94,12 +80,26 @@
             color: limegreen; /* Lime green color */
             text-align: center;
         }
+        .back-home {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 0;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .back-home:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>About Moru William</h1>
-        <a href="/" class="back-home">Back to Home</a>
     </header>
 
     <main>
@@ -138,6 +138,9 @@
             <div class="quote">
                 <p>"Thou God Seesest Me - Genesis 16:13 (KJV)"</p>
             </div>
+
+            <a href="index.html" class="back-home">Back to Home</a>
+
         </section>
 
         <div class="sidebar">
@@ -147,7 +150,7 @@
                 <li><strong>Advanced Diploma in Cybersecurity</strong> - [Your Institution Name]</li>
             </ul>
 
-            <h3>Certifications</h3>
+            <h3>Skills & Certifications</h3>
             <ul>
                 <li>Certified Ethical Hacker (CEH)</li>
                 <li>Ethical Hacking Essentials (EHE)+</li>
