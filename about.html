@@ -7,17 +7,35 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Dark background for tech feel */
+            color: #e0e0e0; /* Lighter text for readability */
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #333;
+            background-color: #1f1f1f; /* Slightly lighter for contrast */
             padding: 20px;
             color: #fff;
             text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .back-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .back-home:hover {
+            background-color: #45a049;
         }
         main {
             display: flex;
@@ -55,7 +73,7 @@
             text-decoration: underline;
         }
         footer {
-            background-color: #333;
+            background-color: #1f1f1f;
             color: #e0e0e0;
             text-align: center;
             padding: 10px;
@@ -69,11 +87,19 @@
         a:hover {
             text-decoration: underline;
         }
+        .quote {
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #bbb;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>About Moru William</h1>
+        <a href="/" class="back-home">Back to Home</a>
     </header>
 
     <main>
@@ -108,6 +134,10 @@
             <p>
                 As a firm believer in open-source tools, I advocate for their use to strengthen cybersecurity practices, especially in Africa, where resources can be limited. My mission is to empower cybersecurity professionals, foster collaboration, and bridge the digital divide by sharing knowledge and contributing to a safer and more secure digital future.
             </p>
+
+            <div class="quote">
+                <p>"Thou God Seesest Me - Genesis 16:13 (KJV)"</p>
+            </div>
         </section>
 
         <div class="sidebar">
@@ -151,3 +181,4 @@
     </footer>
 </body>
 </html>
+
