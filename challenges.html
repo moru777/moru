@@ -39,29 +39,51 @@
             height: auto;
         }
 
-        .side-text {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 20px;
-            font-size: 18px;
-            width: 200px;
-        }
-
-        .bottom-text {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+        /* Side content styling */
+        aside {
+            position: fixed;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 15px;
-            font-size: 18px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: left;
+        }
+
+        .side-advert {
+            top: 10%;
+            right: 10px;
+        }
+
+        .resources {
+            top: 30%;
+            right: 10px;
+        }
+
+        .latest-news {
+            top: 50%;
+            right: 10px;
+        }
+
+        .testimonials {
+            bottom: 10%;
+            right: 10px;
+        }
+
+        .social-media {
+            bottom: 10%;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 8px;
             text-align: center;
-            width: 100%;
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -114,12 +136,44 @@
         <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
     </footer>
 
-    <!-- Text appearing on the side and bottom -->
-    <div class="side-text">
-        Africa's Cybersecurity Journey: Overcoming Challenges & Advancing Innovation.
-    </div>
-    <div class="bottom-text">
-        Building a Safe, Resilient, and Secure Digital Future Together.
+    <!-- Side content -->
+    <aside class="side-advert">
+        <h3>Sponsored by [Company Name]</h3>
+        <img src="advertisement.jpg" alt="Cybersecurity Ad" />
+        <p>Learn more about the latest cybersecurity trends and tools from [Company Name].</p>
+    </aside>
+
+    <aside class="resources">
+        <h3>Resources for Cybersecurity Enthusiasts</h3>
+        <ul>
+            <li><a href="https://www.cybrary.it/">Cybrary - Free Cybersecurity Courses</a></li>
+            <li><a href="https://www.sans.org/cyber-security-courses/">SANS Cybersecurity Training</a></li>
+            <li><a href="https://www.linkedin.com/groups/2055227/">Cybersecurity LinkedIn Group</a></li>
+        </ul>
+    </aside>
+
+    <aside class="latest-news">
+        <h3>Latest in Cybersecurity</h3>
+        <p><strong>Cybersecurity Conference 2025</strong> - Join experts from across the world in Nairobi for the upcoming cybersecurity conference.</p>
+        <p><strong>New Research on African Cybersecurity Trends</strong> - Read the latest report on emerging cybersecurity threats in Africa.</p>
+    </aside>
+
+    <aside class="testimonials">
+        <h3>What Cybersecurity Experts Are Saying</h3>
+        <blockquote>
+            "The future of cybersecurity in Africa is bright. With passion and innovation, we can create secure systems and tackle global challenges."
+            <footer>- John Doe, Cybersecurity Specialist</footer>
+        </blockquote>
+    </aside>
+
+    <!-- Updated Social Media Section -->
+    <div class="social-media">
+        <h3>Connect with Me</h3>
+        <p>Website🌐 <a href="https://moru777.github.io/moru/" target="_blank">moru777.github.io/moru/</a></p>
+        <p>Email ✉️ <a href="mailto:moruwilliam7@gmail.com">moruwilliam7@gmail.com</a></p>
+        <p>LinkedIn 🔗 <a href="https://www.linkedin.com/in/moru-william" target="_blank">LinkedIn</a></p>
+        <p>GitHub 🐙 <a href="https://github.com/moru777" target="_blank">GitHub</a></p>
+        <p>X (Twitter) 🐦 <a href="https://twitter.com/moru_Botmaster" target="_blank">@moru_Botmaster</a></p>
     </div>
 </body>
 </html>
