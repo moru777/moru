@@ -6,195 +6,155 @@
     <title>About Us</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* General page styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
         }
-
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 15px 0;
+            background-color: #1a1a1a;
+            padding: 20px;
             text-align: center;
         }
-
         header h1 {
-            margin: 0;
             font-size: 2.5rem;
+            color: #0c9c7a;
+            margin-bottom: 10px;
         }
-
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 10px 0;
         }
-
         nav ul li {
-            display: inline;
-            margin-right: 20px;
+            display: inline-block;
+            margin: 0 15px;
         }
-
         nav ul li a {
-            color: #fff;
             text-decoration: none;
-            font-size: 1.1rem;
+            color: #f0f0f0;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
-
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #0c9c7a;
         }
-
         main {
-            padding: 20px;
-            background-color: #fff;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        p {
+            padding: 50px 15%;
             line-height: 1.6;
-            font-size: 1.1rem;
         }
-
-        .image-container {
-            display: block;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .image-container img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            display: block;
-            margin: 0 auto;
-        }
-
-        .image-left {
-            float: left;
-            width: 45%;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-right {
-            float: right;
-            width: 45%;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
+        h2 {
+            font-size: 2rem;
+            color: #0c9c7a;
             text-align: center;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
         }
-
-        footer p {
-            margin: 0;
+        .content-section {
+            margin-bottom: 50px;
         }
-
-        a {
-            color: #007bff;
+        .content-section p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 15px;
+            color: #f0f0f0;
+        }
+        footer a {
+            color: #0c9c7a;
             text-decoration: none;
         }
-
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
-
-        /* Clear fix for floated elements */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
+        .back-btn {
+            font-size: 1.1rem;
+            background-color: #0c9c7a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #118a61;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="challenges.html">Challenges</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>Who We Are</h2>
-            <p>
-                This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. 
-                Despite facing numerous challenges such as limited resources, access to premium tools, 
-                and infrastructure constraints, we remain committed to creating secure environments 
-                and systems.
-            </p>
-            
-            <!-- Image 1: On the left with text on the right -->
-            <div class="clearfix">
-                <img src="images/Africa-cyberspace.jpg" alt="Africa Cyberspace" class="image-left">
-                <p>
-                    Our mission is to inspire and empower a new generation of African cybersecurity 
-                    professionals who are driven by passion, innovation, and resilience. We rely entirely 
-                    on open-source tools, proving that a lack of commercial solutions is not a barrier to 
-                    delivering exceptional results.
-                </p>
-            </div>
+<header>
+    <h1>About Us</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+</header>
 
-            <!-- Image 2: On the right with text on the left -->
-            <div class="clearfix">
-                <p>
-                    By building strong communities, sharing knowledge, and collaborating across the 
-                    continent, we aim to bridge the gap in cybersecurity and ensure a safer digital 
-                    future for Africa. Together, we tackle modern-day security challenges, foster local 
-                    talent, and advocate for the use of open-source solutions to drive sustainable growth 
-                    in the tech and security sectors.
-                </p>
-                <img src="images/cyber-security-africa.jpg" alt="Cyber Security in Africa" class="image-right">
-            </div>
+<main>
+    <section class="content-section">
+        <h2>Who We Are</h2>
+        <p>
+            This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges 
+            such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure 
+            environments and systems.
+        </p>
 
-            <h2>About the Builder</h2>
-            <p>
-                This website was built and deployed by Moru William, a cybersecurity engineer with a background 
-                in application security engineering, ethical hacking, and cloud security. Despite not being a developer 
-                by trade, Moru leveraged their extensive expertise in cybersecurity to create and deploy this site using 
-                GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.
-            </p>
-        </section>
+        <div class="image-container">
+            <img src="images/Africa-cyberspace.jpg" alt="Africa Cyberspace">
+        </div>
 
-        <section>
-            <p><a href="index.html">← Go Back to Home</a></p>
-        </section>
-    </main>
+        <p>
+            Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, 
+            innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a 
+            barrier to delivering exceptional results.
+        </p>
 
-    <footer>
-        <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
-    </footer>
+        <div class="image-container">
+            <img src="images/cyber-security-africa.jpg" alt="Cybersecurity in Africa">
+        </div>
+
+        <p>
+            By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in 
+            cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster 
+            local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>About the Builder</h2>
+        <p>
+            This website was built and deployed by <strong>Moru William</strong>, a cybersecurity engineer with a background in application 
+            security engineering, ethical hacking,cloud security engineering and cyber security consultancy. Despite not being a developer by profession, Moru leveraged his 
+            extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire 
+            a growing community of cybersecurity professionals in Africa.
+        </p>
+    </section>
+
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="window.location.href='index.html'">← Go Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
