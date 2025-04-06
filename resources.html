@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +7,93 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
         }
         h1, h2 {
             color: #2c3e50;
         }
         ul {
             list-style-type: none;
-            padding: 0;
+            padding-left: 20px;
         }
-        ul li a {
-            color: #1E90FF;
+        li {
+            margin: 10px 0;
+        }
+        a {
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            color: #2980b9;
         }
-        ul li a:hover {
-            color: #FF4500;
+        a:hover {
             text-decoration: underline;
         }
-        .resource-content {
+        .section {
             margin-bottom: 40px;
         }
-        a.back-link {
-            display: inline-block;
+        .back-link {
+            display: block;
             margin-top: 20px;
-            color: #1E90FF;
+            color: #16a085;
+        }
+        details {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        summary {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            color: #34495e;
         }
     </style>
 </head>
-
 <body>
     <h1>Choose a Resource:</h1>
 
-    <section id="events" class="resource-content">
-        <h2>Cybersecurity Events in Africa</h2>
-        <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening across Africa:</p>
-        <ul>
-            <li><a href="#">CyberAfrica Conference 2025</a> – March 15, 2025 – Kigali, Rwanda</li>
-            <li><a href="#">Africa Cybersecurity Summit</a> – June 20, 2025 – Nairobi, Kenya</li>
-            <li><a href="#">Cybersecurity East Africa 2025</a> – August 12, 2025 – Dar Es Salaam, Tanzania</li>
-            <li><a href="#">West African Cybersecurity Forum</a> – September 8, 2025 – Lagos, Nigeria</li>
-        </ul>
-        <a href="resources.html" class="back-link">&larr; Go Back to Resources</a>
-    </section>
+    <div class="section">
+        <details>
+            <summary>Cybersecurity Events in Africa</summary>
+            <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening across Africa:</p>
+            <ul>
+                <li><a href="#">CyberAfrica Conference 2025 – March 15, 2025 – Kigali, Rwanda</a></li>
+                <li><a href="#">Africa Cybersecurity Summit – June 20, 2025 – Nairobi, Kenya</a></li>
+                <li><a href="#">Cybersecurity East Africa 2025 – August 12, 2025 – Dar Es Salaam, Tanzania</a></li>
+                <li><a href="#">West African Cybersecurity Forum – September 8, 2025 – Lagos, Nigeria</a></li>
+            </ul>
+        </details>
 
-    <section id="ebooks" class="resource-content">
-        <h2>Cybersecurity Ebooks</h2>
-        <p>Download free and premium eBooks covering various aspects of cybersecurity:</p>
-        <ul>
-            <li><a href="https://www.oreilly.com/library/view/network-security-assessment/9781491911058/" target="_blank">Network Security Assessment by Chris McNab</a> – Hands-on guide to penetration testing and network defense.</li>
-            <li><a href="https://nostarch.com/hacking3" target="_blank">The Art of Exploitation (2nd Ed) by Jon Erickson</a> – Learn how hacking works at the code level.</li>
-            <li><a href="https://www.oreilly.com/library/view/blue-team-handbook/9781737928709/" target="_blank">Blue Team Handbook</a> – Incident response and defense for blue team professionals.</li>
-            <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking#books" target="_blank">Awesome Hacking Books (GitHub List)</a> – Curated list of top-rated cybersecurity and hacking books.</li>
-            <li><a href="https://www.sans.org/white-papers/" target="_blank">SANS Institute Whitepapers</a> – Research papers and eBooks on cybersecurity fundamentals and advanced topics.</li>
-        </ul>
-        <a href="resources.html" class="back-link">&larr; Go Back to Resources</a>
-    </section>
+        <details>
+            <summary>Cybersecurity Ebooks</summary>
+            <p>Download free and premium eBooks covering various aspects of cybersecurity:</p>
+            <ul>
+                <li><a href="https://www.amazon.com/Network-Security-Assessment-Chris-McNab/dp/149191095X" target="_blank">Network Security Assessment by Chris McNab</a> – Hands-on guide to penetration testing and network defense.</li>
+                <li><a href="https://www.nostarch.com/hacking2.htm" target="_blank">The Art of Exploitation (2nd Ed) by Jon Erickson</a> – Learn how hacking works at the code level.</li>
+                <li><a href="https://www.amazon.com/Blue-Team-Handbook-condensed-responder/dp/1500734756" target="_blank">Blue Team Handbook</a> – Incident response and defense for blue team professionals.</li>
+                <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Awesome Hacking Books (GitHub List)</a> – Curated list of top-rated cybersecurity and hacking books.</li>
+                <li><a href="https://www.sans.org/white-papers/" target="_blank">SANS Institute Whitepapers</a> – Research papers and eBooks on cybersecurity fundamentals and advanced topics.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Cybersecurity Blog Articles</summary>
+            <p>Explore insightful articles from cybersecurity professionals and enthusiasts:</p>
+            <ul>
+                <li><a href="https://www.kaspersky.com/blog" target="_blank">Kaspersky Daily</a> – Latest cybersecurity trends and tips.</li>
+                <li><a href="https://www.schneier.com/" target="_blank">Schneier on Security</a> – Thought leadership by Bruce Schneier.</li>
+                <li><a href="https://blog.rapid7.com/" target="_blank">Rapid7 Blog</a> – Industry insights, vulnerability disclosures, and more.</li>
+                <li><a href="https://www.darkreading.com/" target="_blank">Dark Reading</a> – In-depth security news and analysis.</li>
+                <li><a href="https://blogs.cisco.com/security" target="_blank">Cisco Security Blog</a> – Corporate insights and technical breakdowns.</li>
+            </ul>
+        </details>
+
+        <a class="back-link" href="index.html">← Go Back to Resources</a>
+    </div>
 
 </body>
-
 </html>
