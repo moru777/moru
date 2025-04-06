@@ -12,6 +12,8 @@
       color: #f0f0f0;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -29,7 +31,6 @@
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
 
     nav ul li {
@@ -50,22 +51,13 @@
 
     .container {
       display: flex;
-      flex-direction: row;
-      padding: 40px 10%;
-      gap: 40px;
+      gap: 20px;
+      padding: 30px 5%;
     }
 
     main {
       flex: 3;
       line-height: 1.6;
-    }
-
-    aside {
-      flex: 1;
-      background-color: #1f1f1f;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(12, 156, 122, 0.2);
     }
 
     h2 {
@@ -94,20 +86,9 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    footer {
-      background-color: #1a1a1a;
+    .back-btn-container {
       text-align: center;
-      padding: 15px;
-      color: #f0f0f0;
-    }
-
-    footer a {
-      color: #0c9c7a;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      margin: 20px 0;
     }
 
     .back-btn {
@@ -125,36 +106,85 @@
       background-color: #118a61;
     }
 
+    aside {
+      flex: 1;
+      background: linear-gradient(145deg, #1a1f2b, #11151c);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 170, 0.1);
+      border: 1px solid #0c9c7a33;
+      max-height: fit-content;
+    }
+
     .sidebar-section {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #2c2f3f;
     }
 
     .sidebar-section h3 {
-      color: #0c9c7a;
-      font-size: 1.2rem;
+      color: #38f2c7;
+      font-size: 1.3rem;
       margin-bottom: 10px;
+      text-shadow: 0 0 5px #0c9c7a88;
     }
 
     .quote {
       font-style: italic;
       font-size: 0.95rem;
-      color: #ccc;
+      color: #b0fcea;
       margin-bottom: 15px;
+      border-left: 3px solid #0c9c7a;
+      padding-left: 10px;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-section ul li {
+      padding: 6px 0;
+      color: #b3f2e7;
+      font-size: 0.95rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .sidebar-section ul li::before {
+      content: '🟢';
+      position: absolute;
+      left: 0;
+      font-size: 0.75rem;
+      color: #38f2c7;
     }
 
     .tip {
-      background-color: #262626;
+      background: rgba(12, 156, 122, 0.1);
+      border-left: 4px solid #38f2c7;
       padding: 10px;
-      margin-bottom: 10px;
-      border-left: 4px solid #0c9c7a;
+      margin-bottom: 12px;
       font-size: 0.95rem;
+      color: #c8fff5;
+      box-shadow: inset 0 0 8px rgba(56, 242, 199, 0.1);
+      border-radius: 6px;
     }
 
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-        padding: 20px 5%;
-      }
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 15px;
+      color: #f0f0f0;
+    }
+
+    footer a {
+      color: #0c9c7a;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -177,9 +207,7 @@
     <section class="content-section">
       <h2>What The Website Is About</h2>
       <p>
-        This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges 
-        such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure 
-        environments and systems.
+        This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure environments and systems.
       </p>
 
       <div class="image-container">
@@ -187,9 +215,7 @@
       </div>
 
       <p>
-        Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, 
-        innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a 
-        barrier to delivering exceptional results.
+        Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a barrier to delivering exceptional results.
       </p>
 
       <div class="image-container">
@@ -197,18 +223,14 @@
       </div>
 
       <p>
-        By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in 
-        cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster 
-        local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.
+        By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.
       </p>
     </section>
 
     <section class="content-section">
       <h2>About the Builder</h2>
       <p>
-        This website was built and deployed by <strong>Moru William</strong>, a cybersecurity engineer with a background in application 
-        security engineering, ethical hacking, cloud security engineering, and cyber security consultancy. Despite not being a developer by profession, 
-        Moru leveraged his expertise to create and deploy this site using GitHub Pages to support and inspire cybersecurity professionals across Africa.
+        This website was built and deployed by <strong>Moru William</strong>, a cybersecurity engineer with a background in application security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.
       </p>
     </section>
 
@@ -219,28 +241,42 @@
 
   <aside>
     <div class="sidebar-section">
-      <h3>Tech Quotes</h3>
-      <p class="quote">"Cybersecurity is much more than a matter of IT." – Stephane Nappo</p>
+      <h3>💬 Quotes</h3>
+      <p class="quote">"Cybersecurity is not a product, but a process." – Bruce Schneier</p>
+      <p class="quote">"Security is always excessive until it’s not enough." – Robbie Sinclair</p>
       <p class="quote">"The best way to predict the future is to invent it." – Alan Kay</p>
-      <p class="quote">"Security is not a product, but a process." – Bruce Schneier</p>
     </div>
 
     <div class="sidebar-section">
-      <h3>Trending in Tech</h3>
+      <h3>🔧 Quick Tips</h3>
+      <div class="tip">Use multi-factor authentication (MFA) on everything.</div>
+      <div class="tip">Stay updated with CVEs and industry trends.</div>
+      <div class="tip">Explore bug bounty platforms to build skills.</div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>🌐 Connect with Moru</h3>
       <ul>
-        <li>🔐 Cloud Security</li>
-        <li>🧠 AI in Cyber Defense</li>
-        <li>🧬 Quantum Cryptography</li>
-        <li>📱 Mobile App Security</li>
-        <li>🌐 Zero Trust Architecture</li>
+        <li><a href="https://moru777.github.io/moru/" target="_blank" style="color: #38f2c7;">🌍 Website</a></li>
+        <li><a href="mailto:moruwilliam7@gmail.com" style="color: #38f2c7;">✉️ moruwilliam7@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/moru-william" target="_blank" style="color: #38f2c7;">🔗 LinkedIn</a></li>
+        <li><a href="https://github.com/moru777" target="_blank" style="color: #38f2c7;">🐙 GitHub</a></li>
+        <li><a href="https://x.com/moru_Botmaster" target="_blank" style="color: #38f2c7;">🐦 X (Twitter)</a></li>
+        <li><a href="https://www.instagram.com/moru_william" target="_blank" style="color: #38f2c7;">📸 Instagram</a></li>
+        <li><a href="https://t.me/moru777" target="_blank" style="color: #38f2c7;">💬 Telegram</a></li>
+        <li><a href="https://youtube.com/@moru-william" target="_blank" style="color: #38f2c7;">▶️ YouTube</a></li>
       </ul>
     </div>
 
     <div class="sidebar-section">
-      <h3>Tips for Newbies</h3>
-      <div class="tip">Start with basics: networking, Linux, and OWASP Top 10.</div>
-      <div class="tip">Join a community like TryHackMe or Hack The Box.</div>
-      <div class="tip">Practice consistently and document your learning journey.</div>
+      <h3>📚 Learn More</h3>
+      <ul>
+        <li>🛡️ Threat Intelligence</li>
+        <li>🕵️ Bug Bounty Hunting</li>
+        <li>🎯 Red Teaming</li>
+        <li>⚙️ CTF Writeups</li>
+        <li>☁️ Cloud Security</li>
+      </ul>
     </div>
   </aside>
 </div>
