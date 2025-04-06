@@ -6,15 +6,18 @@
     <title>Cybersecurity Resources</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
             margin: 0;
             padding: 20px;
             color: #333;
         }
-        h1, h2 {
-            color: #2c3e50;
+        h1 {
+            color: #1a2e4b;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 40px;
         }
         ul {
             list-style-type: none;
@@ -22,12 +25,15 @@
         }
         li {
             margin: 10px 0;
+            font-size: 1rem;
         }
         a {
             text-decoration: none;
-            color: #2980b9;
+            color: #1e90ff;
+            transition: color 0.3s;
         }
         a:hover {
+            color: #3742fa;
             text-decoration: underline;
         }
         .section {
@@ -35,21 +41,32 @@
         }
         .back-link {
             display: block;
-            margin-top: 20px;
+            margin-top: 30px;
+            text-align: center;
             color: #16a085;
+            font-weight: bold;
         }
         details {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        details:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         summary {
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: 1.3em;
+            font-weight: 600;
             cursor: pointer;
-            color: #34495e;
+            color: #2f3640;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 10px;
+            color: #555;
         }
     </style>
 </head>
@@ -89,6 +106,18 @@
                 <li><a href="https://blog.rapid7.com/" target="_blank">Rapid7 Blog</a> – Industry insights, vulnerability disclosures, and more.</li>
                 <li><a href="https://www.darkreading.com/" target="_blank">Dark Reading</a> – In-depth security news and analysis.</li>
                 <li><a href="https://blogs.cisco.com/security" target="_blank">Cisco Security Blog</a> – Corporate insights and technical breakdowns.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Cybersecurity Practice Labs</summary>
+            <p>Enhance your hands-on skills with interactive cybersecurity training labs and platforms:</p>
+            <ul>
+                <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a> – Guided, gamified penetration testing labs for all skill levels.</li>
+                <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a> – Real-world hacking challenges in a lab environment.</li>
+                <li><a href="https://attackdefense.com/" target="_blank">AttackDefense</a> – Interactive labs for offensive security skills development.</li>
+                <li><a href="https://www.root-me.org/" target="_blank">Root Me</a> – Online platform for learning and practicing hacking techniques.</li>
+                <li><a href="https://www.cybrary.it/" target="_blank">Cybrary</a> – Cybersecurity training, certifications, and hands-on labs.</li>
             </ul>
         </details>
 
