@@ -1,139 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        function toggleSection() {
-            var selectedOption = document.getElementById("resourceDropdown").value;
-            var sections = document.getElementsByClassName("resource-content");
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].style.display = "none";
-            }
-            if (selectedOption) {
-                document.getElementById(selectedOption).style.display = "block";
-            }
-        }
-    </script>
+    <title>Cybersecurity Resources</title>
     <style>
-        .resource-menu {
-            text-align: center;
-            margin: 20px 0;
-            position: relative;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-        .dropdown-container {
-            display: inline-block;
-            position: relative;
-        }
-        .dropdown-container select {
-            padding: 12px;
-            font-size: 16px;
-            background-color: var(--accent-blue);
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .dropdown-container select:hover {
-            background-color: var(--accent-green);
-        }
-        .resource-content {
-            display: none;
-            padding: 20px;
-            background: var(--secondary-bg);
-            color: var(--text-color);
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: opacity 0.5s ease-in-out;
-        }
-        .back-home {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .back-home a {
-            padding: 12px 18px;
-            background-color: var(--accent-green);
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .back-home a:hover {
-            background-color: var(--accent-blue);
+        h1, h2 {
+            color: #2c3e50;
         }
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
-        ul li {
-            margin: 10px 0;
-        }
         ul li a {
-            color: var(--text-color);
+            color: #1E90FF;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
         ul li a:hover {
+            color: #FF4500;
             text-decoration: underline;
+        }
+        .resource-content {
+            margin-bottom: 40px;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #1E90FF;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Resources</h1>
-    </header>
+    <h1>Choose a Resource:</h1>
 
-    <main>
-        <div class="resource-menu">
-            <label for="resourceDropdown">Choose a Resource: </label>
-            <div class="dropdown-container">
-                <select id="resourceDropdown" onchange="toggleSection()">
-                    <option value="">-- Select --</option>
-                    <option value="events">Cybersecurity Events</option>
-                    <option value="blogs">Blogs</option>
-                    <option value="ebooks">Ebooks</option>
-                </select>
-            </div>
-        </div>
+    <section id="events" class="resource-content">
+        <h2>Cybersecurity Events in Africa</h2>
+        <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening across Africa:</p>
+        <ul>
+            <li><a href="#">CyberAfrica Conference 2025</a> – March 15, 2025 – Kigali, Rwanda</li>
+            <li><a href="#">Africa Cybersecurity Summit</a> – June 20, 2025 – Nairobi, Kenya</li>
+            <li><a href="#">Cybersecurity East Africa 2025</a> – August 12, 2025 – Dar Es Salaam, Tanzania</li>
+            <li><a href="#">West African Cybersecurity Forum</a> – September 8, 2025 – Lagos, Nigeria</li>
+        </ul>
+        <a href="resources.html" class="back-link">&larr; Go Back to Resources</a>
+    </section>
 
-        <section id="events" class="resource-content">
-            <h2>Cybersecurity Events in Africa 2025</h2>
-            <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening across Africa:</p>
-            <ul>
-                <li><a href="https://www.cyberafricaconference.com" target="_blank">CyberAfrica Conference 2025</a> - March 15, 2025 - Kigali, Rwanda</li>
-                <li><a href="https://www.africacybersecuritysummit.com" target="_blank">Africa Cybersecurity Summit</a> - June 20, 2025 - Nairobi, Kenya</li>
-                <li><a href="https://www.cybersecurityeastafrica.com" target="_blank">Cybersecurity East Africa 2025</a> - August 12, 2025 - Dar Es Salaam, Tanzania</li>
-                <li><a href="https://www.westafricancybersecurityforum.com" target="_blank">West African Cybersecurity Forum</a> - September 8, 2025 - Lagos, Nigeria</li>
-            </ul>
-        </section>
+    <section id="ebooks" class="resource-content">
+        <h2>Cybersecurity Ebooks</h2>
+        <p>Download free and premium eBooks covering various aspects of cybersecurity:</p>
+        <ul>
+            <li><a href="https://www.oreilly.com/library/view/network-security-assessment/9781491911058/" target="_blank">Network Security Assessment by Chris McNab</a> – Hands-on guide to penetration testing and network defense.</li>
+            <li><a href="https://nostarch.com/hacking3" target="_blank">The Art of Exploitation (2nd Ed) by Jon Erickson</a> – Learn how hacking works at the code level.</li>
+            <li><a href="https://www.oreilly.com/library/view/blue-team-handbook/9781737928709/" target="_blank">Blue Team Handbook</a> – Incident response and defense for blue team professionals.</li>
+            <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking#books" target="_blank">Awesome Hacking Books (GitHub List)</a> – Curated list of top-rated cybersecurity and hacking books.</li>
+            <li><a href="https://www.sans.org/white-papers/" target="_blank">SANS Institute Whitepapers</a> – Research papers and eBooks on cybersecurity fundamentals and advanced topics.</li>
+        </ul>
+        <a href="resources.html" class="back-link">&larr; Go Back to Resources</a>
+    </section>
 
-        <section id="blogs" class="resource-content">
-            <h2>Blogs</h2>
-            <p>Explore insightful articles and industry news from top cybersecurity professionals.</p>
-            <ul>
-                <li><a href="cyber1.html">What is Cybersecurity?</a></li>
-                <li><a href="tools.html">Cybersecurity Tools Types</a></li>
-                <!-- Add more blog links here as needed -->
-            </ul>
-        </section>
-
-        <section id="ebooks" class="resource-content">
-            <h2>Ebooks</h2>
-            <p>Download free and premium eBooks covering various aspects of cybersecurity.</p>
-        </section>
-
-        <div class="back-home">
-            <a href="index.html">&larr; Go Back to Home Page</a>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
-    </footer>
 </body>
+
 </html>
