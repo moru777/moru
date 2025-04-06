@@ -1,251 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1a1a1a;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            color: #0c9c7a;
-            margin-bottom: 10px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #f0f0f0;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #0c9c7a;
-        }
-        main {
-            padding: 50px 15%;
-            line-height: 1.6;
-        }
-        h2 {
-            font-size: 2rem;
-            color: #0c9c7a;
-            text-align: center;
-        }
-        .content-section {
-            margin-bottom: 50px;
-        }
-        .content-section p {
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-        .image-container {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 15px;
-            color: #f0f0f0;
-        }
-        footer a {
-            color: #0c9c7a;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .back-btn {
-            font-size: 1.1rem;
-            background-color: #0c9c7a;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .back-btn:hover {
-            background-color: #118a61;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Side content styling */
-        aside {
-            position: fixed;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            width: 250px;
-            margin: 10px;
-        }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .side-advert {
-            top: 10%;
-            right: 10px;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      color: #0c9c7a;
+      margin-bottom: 10px;
+    }
 
-        .quote {
-            top: 30%;
-            left: 10px;
-            text-align: center;
-            font-size: 1.2rem;
-        }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-        .testimonials {
-            bottom: 20%;
-            right: 10px;
-        }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
 
-        .resources {
-            bottom: 10%;
-            left: 10px;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
 
-        .social-media {
-            bottom: 10%;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-        }
+    nav ul li a:hover {
+      color: #0c9c7a;
+    }
 
-        .social-media a {
-            color: white;
-            text-decoration: none;
-            margin: 5px;
-            font-size: 16px;
-        }
-    </style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 40px 10%;
+      gap: 40px;
+    }
+
+    main {
+      flex: 3;
+      line-height: 1.6;
+    }
+
+    aside {
+      flex: 1;
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(12, 156, 122, 0.2);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #0c9c7a;
+      text-align: center;
+    }
+
+    .content-section {
+      margin-bottom: 50px;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 15px;
+      color: #f0f0f0;
+    }
+
+    footer a {
+      color: #0c9c7a;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .back-btn {
+      font-size: 1.1rem;
+      background-color: #0c9c7a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #118a61;
+    }
+
+    .sidebar-section {
+      margin-bottom: 25px;
+    }
+
+    .sidebar-section h3 {
+      color: #0c9c7a;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .tip {
+      background-color: #262626;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-left: 4px solid #0c9c7a;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 20px 5%;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>About </h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Moru</a></li>
-            <li><a href="challenges.html">Challenges</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
+  <h1>About</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Moru</a></li>
+      <li><a href="challenges.html">Challenges</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
+<div class="container">
+  <main>
     <section class="content-section">
-        <h2>What The Website Is About</h2>
-        <p>
-            This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges 
-            such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure 
-            environments and systems.
-        </p>
+      <h2>What The Website Is About</h2>
+      <p>
+        This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges 
+        such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure 
+        environments and systems.
+      </p>
 
-        <div class="image-container">
-            <img src="images/Africa-cyberspace.jpg" alt="Africa Cyberspace">
-        </div>
+      <div class="image-container">
+        <img src="images/Africa-cyberspace.jpg" alt="Africa Cyberspace">
+      </div>
 
-        <p>
-            Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, 
-            innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a 
-            barrier to delivering exceptional results.
-        </p>
+      <p>
+        Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, 
+        innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a 
+        barrier to delivering exceptional results.
+      </p>
 
-        <div class="image-container">
-            <img src="images/cyber-security-africa.jpg" alt="Cybersecurity in Africa">
-        </div>
+      <div class="image-container">
+        <img src="images/cyber-security-africa.jpg" alt="Cybersecurity in Africa">
+      </div>
 
-        <p>
-            By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in 
-            cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster 
-            local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.
-        </p>
+      <p>
+        By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in 
+        cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster 
+        local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.
+      </p>
     </section>
 
     <section class="content-section">
-        <h2>About the Builder</h2>
-        <p>
-            This website was built and deployed by <strong>Moru William</strong>, a cybersecurity engineer with a background in application 
-            security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his 
-            extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire 
-            a growing community of cybersecurity professionals in Africa.
-        </p>
+      <h2>About the Builder</h2>
+      <p>
+        This website was built and deployed by <strong>Moru William</strong>, a cybersecurity engineer with a background in application 
+        security engineering, ethical hacking, cloud security engineering, and cyber security consultancy. Despite not being a developer by profession, 
+        Moru leveraged his expertise to create and deploy this site using GitHub Pages to support and inspire cybersecurity professionals across Africa.
+      </p>
     </section>
 
     <div class="back-btn-container">
-        <button class="back-btn" onclick="window.location.href='index.html'">← Go Back to Home</button>
+      <button class="back-btn" onclick="window.location.href='index.html'">← Go Back to Home</button>
     </div>
-</main>
+  </main>
+
+  <aside>
+    <div class="sidebar-section">
+      <h3>Tech Quotes</h3>
+      <p class="quote">"Cybersecurity is much more than a matter of IT." – Stephane Nappo</p>
+      <p class="quote">"The best way to predict the future is to invent it." – Alan Kay</p>
+      <p class="quote">"Security is not a product, but a process." – Bruce Schneier</p>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Trending in Tech</h3>
+      <ul>
+        <li>🔐 Cloud Security</li>
+        <li>🧠 AI in Cyber Defense</li>
+        <li>🧬 Quantum Cryptography</li>
+        <li>📱 Mobile App Security</li>
+        <li>🌐 Zero Trust Architecture</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Tips for Newbies</h3>
+      <div class="tip">Start with basics: networking, Linux, and OWASP Top 10.</div>
+      <div class="tip">Join a community like TryHackMe or Hack The Box.</div>
+      <div class="tip">Practice consistently and document your learning journey.</div>
+    </div>
+  </aside>
+</div>
 
 <footer>
-    <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
+  <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
 </footer>
-
-<!-- Side content -->
-<aside class="side-advert">
-    <h3>Sponsored by [Company Name]</h3>
-    <img src="advertisement.jpg" alt="Cybersecurity Ad" />
-    <p>Learn more about the latest cybersecurity trends and tools from [Company Name].</p>
-</aside>
-
-<aside class="quote">
-    <h3>Inspirational Quote</h3>
-    <blockquote>
-        "Cybersecurity is not just about technology; it’s about trust, and trust is the foundation of every digital interaction." 
-        <footer>- Anonymous</footer>
-    </blockquote>
-</aside>
-
-<aside class="testimonials">
-    <h3>What Cybersecurity Experts Are Saying</h3>
-    <blockquote>
-        "The future of cybersecurity in Africa is bright. With passion and innovation, we can create secure systems and tackle global challenges."
-        <footer>- John Doe, Cybersecurity Specialist</footer>
-    </blockquote>
-</aside>
-
-<aside class="resources">
-    <h3>Resources for Cybersecurity Enthusiasts</h3>
-    <ul>
-        <li><a href="https://www.cybrary.it/">Cybrary - Free Cybersecurity Courses</a></li>
-        <li><a href="https://www.sans.org/cyber-security-courses/">SANS Cybersecurity Training</a></li>
-        <li><a href="https://www.linkedin.com/groups/2055227/">Cybersecurity LinkedIn Group</a></li>
-    </ul>
-</aside>
-
-<!-- Social Media Section -->
-<div class="social-media">
-    <h3>Connect with Me</h3>
-    <p>Website🌐 <a href="https://moru777.github.io/moru/" target="_blank">moru777.github.io/moru/</a></p>
-    <p>Email ✉️ <a href="mailto:moruwilliam7@gmail.com">moruwilliam7@gmail.com</a></p>
-    <p>LinkedIn 🔗 <a href="https://www.linkedin.com/in/moru-william" target="_blank">LinkedIn</a></p>
-    <p>GitHub 🐙 <a href="https://github.com/moru777" target="_blank">GitHub</a></p>
-    <p>X (Twitter) 🐦 <a href="https://twitter.com/moru_Botmaster" target="_blank">@moru_Botmaster</a></p>
-</div>
 
 </body>
 </html>
