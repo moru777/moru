@@ -8,81 +8,66 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
             margin: 0;
-            background: #f7f7f7;
+            padding: 0;
         }
-
-        header, footer {
-            background-color: #222;
-            color: white;
-            padding: 1em;
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
             text-align: center;
         }
-
-        .container {
+        main {
             display: flex;
             flex-direction: row;
-            min-height: 100vh;
+            justify-content: space-between;
+            padding: 20px;
         }
-
+        section {
+            width: 70%;
+            margin-right: 20px;
+        }
         .sidebar {
-            width: 200px;
-            background-color: #333;
-            color: white;
-            padding: 1em;
+            width: 25%;
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
         .sidebar h3 {
-            font-size: 1.2em;
-            border-bottom: 1px solid #555;
-            padding-bottom: 0.5em;
-            margin-top: 0;
+            color: #4caf50;
         }
-
         .sidebar ul {
-            list-style: none;
-            padding-left: 0;
+            list-style-type: none;
+            padding: 0;
         }
-
         .sidebar ul li {
-            margin: 0.5em 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
         }
-
         .sidebar ul li a {
-            color: #ddd;
+            color: #e0e0e0;
             text-decoration: none;
         }
-
         .sidebar ul li a:hover {
             text-decoration: underline;
         }
-
-        main {
-            flex: 1;
-            padding: 2em;
-            background: white;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
         footer {
+            background-color: #333;
+            color: #e0e0e0;
             text-align: center;
-            background-color: #222;
-            color: #ccc;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
-
         a {
-            color: #007acc;
+            color: #4caf50;
         }
-
         a:hover {
             text-decoration: underline;
-        }
-
-        ul {
-            line-height: 1.8;
         }
     </style>
 </head>
@@ -91,85 +76,71 @@
         <h1>About Moru William</h1>
     </header>
 
-    <div class="container">
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <h3>Navigation</h3>
+    <main>
+        <section>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="images/output.png" target="_blank">
+                    <img src="images/output.png" alt="Moru William" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid #333;">
+                </a>
+            </div>
+
+            <h2>Who I Am</h2>
+            <p>
+                I'm Moru William, a passionate and results-driven Cybersecurity Engineer with over 4 years of experience in penetration testing, application security, and incident response. My journey in cybersecurity has focused on cloud security, DevSecOps, ethical hacking, and creating secure environments across a variety of platforms.
+            </p>
+            <p>
+                Despite not being a developer, I’ve leveraged my expertise in security to create and deploy this website using GitHub Pages, demonstrating that a strong understanding of security can go hand-in-hand with technical execution.
+            </p>
+            <p>
+                Throughout my career, I've specialized in offensive security strategies and advanced threat modeling to mitigate risks. I also have a track record of providing training and raising cyber awareness, including hosting seminars to educate non-technical users on safe online practices.
+            </p>
+            <p>
+                My core technical expertise includes:
+            </p>
             <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="about.html">👤 About</a></li>
-                <li><a href="projects.html">📁 Projects</a></li>
-                <li><a href="contact.html">📬 Contact</a></li>
+                <li>Penetration Testing (Web, Mobile, Cloud)</li>
+                <li>Compliance (PCI-DSS, NIST, ISO 27001)</li>
+                <li>Secure Software Development (SAST/DAST)</li>
+                <li>Cloud Security (AWS, GCP)</li>
+                <li>Security Automation (CI/CD, Docker, Kubernetes)</li>
+                <li>Digital Forensics and Incident Response</li>
             </ul>
-        </aside>
+            <p>
+                As a firm believer in open-source tools, I advocate for their use to strengthen cybersecurity practices, especially in Africa, where resources can be limited. My mission is to empower cybersecurity professionals, foster collaboration, and bridge the digital divide by sharing knowledge and contributing to a safer and more secure digital future.
+            </p>
+        </section>
 
-        <!-- Main Content -->
-        <main>
-            <section>
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <a href="images/output.png" target="_blank">
-                        <img src="images/output.png" alt="Moru William" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid #333;">
-                    </a>
-                </div>
-
-                <h2>Who I Am</h2>
-                <p>
-                    I'm Moru William, a passionate and results-driven Cybersecurity Engineer with over 4 years of experience in penetration testing, application security, and incident response.
-                    My journey in cybersecurity has focused on cloud security, DevSecOps, ethical hacking, and creating secure environments across a variety of platforms.
-                </p>
-                <p>
-                    Despite not being a developer, I’ve leveraged my expertise in security to create and deploy this website using GitHub Pages, demonstrating that a strong understanding of security can go hand-in-hand with technical execution.
-                </p>
-                <p>
-                    Throughout my career, I've specialized in offensive security strategies and advanced threat modeling to mitigate risks.
-                    I also have a track record of providing training and raising cyber awareness, including hosting seminars to educate non-technical users on safe online practices.
-                </p>
-                <p>
-                    My core technical expertise includes:
-                </p>
-                <ul>
-                    <li>Penetration Testing (Web, Mobile, Cloud)</li>
-                    <li>Compliance (PCI-DSS, NIST, ISO 27001)</li>
-                    <li>Secure Software Development (SAST/DAST)</li>
-                    <li>Cloud Security (AWS, GCP)</li>
-                    <li>Security Automation (CI/CD, Docker, Kubernetes)</li>
-                    <li>Digital Forensics and Incident Response</li>
-                </ul>
-                <p>
-                    As a firm believer in open-source tools, I advocate for their use to strengthen cybersecurity practices, especially in Africa, where resources can be limited.
-                    My mission is to empower cybersecurity professionals, foster collaboration, and bridge the digital divide by sharing knowledge and contributing to a safer and more secure digital future.
-                </p>
-            </section>
-
-            <section>
-                <h3>Contact Information</h3>
-                <p>
-                    📍 Kampala, Uganda<br>
-                    📞 Private<br>
-                    ✉️ <a href="mailto:moruwilliam7@gmail.com">moruwilliam7@gmail.com</a><br>
-                    🌐 <a href="https://moru777.github.io/moru/" target="_blank">Website</a><br>
-                    🔗 <a href="https://www.linkedin.com/in/moru-william/" target="_blank">LinkedIn</a> | 
-                    🐙 <a href="https://github.com/moru777" target="_blank">GitHub</a> | 
-                    🐦 <a href="https://twitter.com/moru_Botmaster" target="_blank">X (Twitter)</a>
-                </p>
-            </section>
-
-            <section>
-                <p><a href="index.html">← Go Back to Home</a></p>
-            </section>
-        </main>
-
-        <!-- Right Sidebar -->
-        <aside class="sidebar">
-            <h3>Connect</h3>
+        <div class="sidebar">
+            <h3>Skills & Certifications</h3>
             <ul>
-                <li><a href="mailto:moruwilliam7@gmail.com">📧 Email</a></li>
-                <li><a href="https://www.linkedin.com/in/moru-william/" target="_blank">🔗 LinkedIn</a></li>
-                <li><a href="https://github.com/moru777" target="_blank">🐙 GitHub</a></li>
-                <li><a href="https://twitter.com/moru_Botmaster" target="_blank">🐦 Twitter</a></li>
+                <li>Certified Ethical Hacker (CEH)</li>
+                <li>CompTIA Security+</li>
+                <li>Certified Cloud Security Professional (CCSP)</li>
+                <li>Certified Penetration Testing Engineer (CPTE)</li>
+                <li>Advanced Threat Protection (ATP) Certified</li>
             </ul>
-        </aside>
-    </div>
+
+            <h3>Tech Stack</h3>
+            <ul>
+                <li><strong>Languages:</strong> Python, Bash, JavaScript, Go</li>
+                <li><strong>Tools:</strong> Burp Suite, Nmap, Metasploit, Wireshark, WiFi Pineapple</li>
+                <li><strong>Cloud Platforms:</strong> AWS, GCP, Azure</li>
+                <li><strong>CI/CD Tools:</strong> Jenkins, GitLab, Docker, Kubernetes</li>
+                <li><strong>OS & Virtualization:</strong> Linux, Kali Linux, Parrot OS, VMware</li>
+            </ul>
+
+            <h3>Contact Information</h3>
+            <p>
+                📍  Kampala, Uganda<br>
+                📞 Private<br>
+                ✉️ <a href="mailto:moruwilliam7@gmail.com">moruwilliam7@gmail.com</a><br>
+                🌐 <a href="https://moru777.github.io/moru/" target="_blank">Website</a><br>
+                🔗 <a href="https://www.linkedin.com/in/moru-william/" target="_blank">LinkedIn</a> | 
+                🐙 <a href="https://github.com/moru777" target="_blank">GitHub</a> | 
+                🐦 <a href="https://twitter.com/moru_Botmaster" target="_blank">X (Twitter)</a>
+            </p>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
