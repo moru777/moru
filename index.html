@@ -18,7 +18,7 @@
       background-color: #34495e;
       padding: 10px 20px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* Center the navigation links */
       align-items: center;
     }
 
@@ -47,12 +47,15 @@
     }
 
     aside {
-      flex: 1;
-      background-color: #34495e;
+      flex: 0.8;
+      background: linear-gradient(45deg, #1a252f, #34495e);
       padding: 20px;
       border-radius: 10px;
       position: sticky;
       top: 0;
+      color: #ecf0f1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      font-size: 0.9rem;
     }
 
     .content-section {
@@ -138,6 +141,7 @@
     .sidebar-section h3 {
       font-size: 18px;
       margin-bottom: 10px;
+      color: #3498db;
     }
 
     .sidebar-section ul {
@@ -147,6 +151,23 @@
 
     .sidebar-section li {
       margin: 10px 0;
+    }
+
+    /* Styling for the sidebar tips and quotes */
+    .quote, .tip {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-section li a {
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+
+    .sidebar-section li a:hover {
+      color: #3498db;
     }
   </style>
   <script>
@@ -256,4 +277,18 @@
         <li>✉️ moruwilliam7@gmail.com</li>
         <li>🔗 LinkedIn</li>
         <li>🐙 GitHub</li>
-        <li>
+        <li>🐦 X (Twitter)</li>
+        <li>📸 Instagram</li>
+        <li>💬 Telegram</li>
+        <li>▶️ YouTube</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>&copy; 2025 Cyber Africa. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
