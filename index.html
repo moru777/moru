@@ -6,6 +6,7 @@
   <title>About Us</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
+    /* Your existing CSS... */
     body {
       font-family: Arial, sans-serif;
       background-color: #121212;
@@ -16,248 +17,21 @@
       flex-direction: column;
     }
 
-    header {
-      background-color: #1a1a1a;
-      padding: 20px;
-      text-align: center;
+    /* [ ... existing styles ... ] */
+
+    /* ✨ Fade-in animation styles */
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-in-out;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: #0c9c7a;
-      margin-bottom: 10px;
+    .content-section, .image-container, aside {
+      opacity: 0;
+      transform: translateY(30px);
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #f0f0f0;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #0c9c7a;
-    }
-
-    .container {
-      display: flex;
-      gap: 20px;
-      padding: 30px 5%;
-      flex-wrap: wrap;
-    }
-
-    main {
-      flex: 3;
-      line-height: 1.6;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #0c9c7a;
-      text-align: center;
-    }
-
-    .content-section {
-      margin-bottom: 50px;
-    }
-
-    .content-section p {
-      font-size: 1.1rem;
-      text-align: justify;
-    }
-
-    .image-container {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .image-container img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .back-btn-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .back-btn {
-      font-size: 1.1rem;
-      background-color: #0c9c7a;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .back-btn:hover {
-      background-color: #118a61;
-    }
-
-    aside {
-      flex: 0.8;
-      background: linear-gradient(145deg, #0f1117, #1a1f2b);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 255, 170, 0.1);
-      border: 1px solid #0c9c7a33;
-      max-height: fit-content;
-    }
-
-    .sidebar-section {
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #2c2f3f;
-    }
-
-    .sidebar-section h3 {
-      color: #38f2c7;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 5px #0c9c7a88;
-    }
-
-    .quote {
-      font-style: italic;
-      font-size: 0.95rem;
-      color: #b0fcea;
-      margin-bottom: 15px;
-      border-left: 3px solid #0c9c7a;
-      padding-left: 10px;
-    }
-
-    .sidebar-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar-section ul li {
-      padding: 6px 0;
-      font-size: 0.95rem;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .sidebar-section ul li::before {
-      content: '🟢';
-      position: absolute;
-      left: 0;
-      font-size: 0.75rem;
-      color: #38f2c7;
-    }
-
-    .sidebar-section ul li a {
-      color: #38f2c7;
-      text-decoration: none;
-    }
-
-    .sidebar-section ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .tip {
-      background: rgba(12, 156, 122, 0.1);
-      border-left: 4px solid #38f2c7;
-      padding: 10px;
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-      color: #c8fff5;
-      box-shadow: inset 0 0 8px rgba(56, 242, 199, 0.1);
-      border-radius: 6px;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 15px;
-      color: #f0f0f0;
-    }
-
-    footer a {
-      color: #0c9c7a;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Media Queries */
-    @media (max-width: 1200px) {
-      .container {
-        padding: 20px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      main {
-        flex: 2;
-      }
-      aside {
-        flex: 1;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        gap: 20px;
-      }
-      main {
-        flex: 1;
-      }
-      aside {
-        width: 100%;
-        flex: none;
-      }
-      header h1 {
-        font-size: 1.8rem;
-      }
-      nav ul li {
-        display: block;
-        text-align: center;
-        margin: 10px 0;
-      }
-      nav ul li a {
-        font-size: 0.9rem;
-      }
-      .content-section p {
-        font-size: 1rem;
-      }
-      footer {
-        font-size: 0.9rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .back-btn {
-        font-size: 1rem;
-        padding: 8px 16px;
-      }
-      .quote {
-        font-size: 0.85rem;
-      }
-      .tip {
-        font-size: 0.9rem;
-      }
-    }
+    /* [ ... existing media queries ... ] */
   </style>
 </head>
 <body>
@@ -356,6 +130,62 @@
 <footer>
   <p>&copy; 2025 Cybersecurity in Africa. All rights reserved.</p>
 </footer>
+
+<!-- 🔥 JavaScript for sleek interaction -->
+<script>
+  // Smooth scroll to anchor links (if used)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.content-section, .image-container, aside');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("fade-in");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+  // Rotating quotes
+  const quotes = [
+    `"Cybersecurity is not a product, but a process." – Bruce Schneier`,
+    `"Security is always excessive until it’s not enough." – Robbie Sinclair`,
+    `"The best way to predict the future is to invent it." – Alan Kay`,
+    `"In the world of cyber, complacency is the enemy." – Unknown`,
+    `"Open-source is the future of secure innovation." – Moru William`
+  ];
+
+  let quoteIndex = 0;
+  const quoteElements = document.querySelectorAll(".quote");
+
+  setInterval(() => {
+    quoteIndex = (quoteIndex + 1) % quotes.length;
+    quoteElements.forEach(el => {
+      el.style.opacity = 0;
+      setTimeout(() => {
+        el.textContent = quotes[quoteIndex];
+        el.style.opacity = 1;
+      }, 400);
+    });
+  }, 5000);
+</script>
 
 </body>
 </html>
