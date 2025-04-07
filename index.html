@@ -6,203 +6,48 @@
   <title>About Us</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0e0e0e;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 0;
+    .image-with-caption {
       display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-color: #1a1a1a;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 255, 170, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #0c9c7a;
-      margin-bottom: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
+      align-items: center;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #f0f0f0;
+    .image-with-caption.left .caption {
+      order: -1;
+    }
+
+    .image-with-caption .caption {
+      flex: 1;
       font-size: 1rem;
-      padding: 8px 14px;
-      border-radius: 4px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    nav ul li a:hover {
-      background-color: #0c9c7a33;
-      color: #0c9c7a;
-    }
-
-    .container {
-      display: flex;
-      gap: 20px;
-      padding: 30px 5%;
-      flex-wrap: wrap;
-    }
-
-    main {
-      flex: 3;
+      color: #c1fff2;
+      max-width: 400px;
       line-height: 1.6;
-      animation: fadeSlideIn 1s ease-in;
+      text-shadow: 1px 1px 2px #000;
     }
 
-    h2 {
-      font-size: 2rem;
-      color: #0c9c7a;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .content-section {
-      margin-bottom: 50px;
-    }
-
-    .content-section p {
-      font-size: 1.1rem;
-      text-align: justify;
-      margin-bottom: 20px;
-    }
-
-    .image-container {
-      text-align: center;
-      margin: 30px 0;
-      transform: scale(1);
+    .image-with-caption img {
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
       transition: transform 0.5s ease;
     }
 
-    .image-container:hover {
-      transform: scale(1.05);
+    .image-with-caption img:hover {
+      transform: scale(1.03);
     }
 
-    .image-container img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
     }
 
-    .back-btn-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .back-btn {
-      font-size: 1.1rem;
-      background-color: #0c9c7a;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .back-btn:hover {
-      background-color: #118a61;
-      transform: scale(1.05);
-    }
-
-    aside {
-      flex: 0.8;
-      background: linear-gradient(145deg, #0f1117, #1a1f2b);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 255, 170, 0.1);
-      border: 1px solid #0c9c7a33;
-      animation: slideInRight 1.2s ease-in;
-    }
-
-    .sidebar-section {
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #2c2f3f;
-    }
-
-    .sidebar-section h3 {
-      color: #38f2c7;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 5px #0c9c7a88;
-    }
-
-    .quote {
-      font-style: italic;
-      font-size: 0.95rem;
-      color: #b0fcea;
-      margin-bottom: 15px;
-      border-left: 3px solid #0c9c7a;
-      padding-left: 10px;
-      animation: flicker 2s infinite;
-    }
-
-    .tip {
-      background: rgba(12, 156, 122, 0.1);
-      border-left: 4px solid #38f2c7;
-      padding: 10px;
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-      color: #c8fff5;
-      box-shadow: inset 0 0 8px rgba(56, 242, 199, 0.1);
-      border-radius: 6px;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 15px;
-      color: #f0f0f0;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #0c9c7a;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0.2; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideInRight {
-      from { transform: translateX(100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes fadeSlideIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
   <script>
@@ -222,14 +67,118 @@
         current++;
       }, 6000);
 
-      // Animate page entrance
       document.body.style.opacity = 0;
       setTimeout(() => {
         document.body.style.transition = 'opacity 1.2s ease-in';
         document.body.style.opacity = 1;
       }, 100);
+
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      revealElements.forEach(el => observer.observe(el));
     });
   </script>
 </head>
 <body>
-<!-- ... rest of your HTML content remains unchanged ... -->
+
+<header>
+  <h1>About</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Moru</a></li>
+      <li><a href="#">Challenges</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <main>
+    <div class="content-section reveal">
+      <h2>What The Website Is About</h2>
+      <p>This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure environments and systems.</p>
+    </div>
+
+    <div class="image-with-caption left reveal">
+      <div class="caption">Resilience and determination define Africa's cybersecurity journey — fueled by open-source tools and collective innovation. Communities rise despite limitations, shaping a safer, smarter digital space.</div>
+      <img src="images/cyber-africa-1.jpg" alt="Cyber Africa" />
+    </div>
+
+    <div class="content-section reveal">
+      <h2>Africa Cyberspace</h2>
+      <p>Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a barrier to delivering exceptional results.</p>
+    </div>
+
+    <div class="image-with-caption reveal">
+      <img src="images/cyber-africa-2.jpg" alt="Cyber Defense" />
+      <div class="caption">Empowering communities with digital defense knowledge — because the future of Africa depends on secure networks. From student labs to enterprise deployments, we lead with skill and strategy.</div>
+    </div>
+
+    <div class="content-section reveal">
+      <h2>Cybersecurity in Africa</h2>
+      <p>By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.</p>
+    </div>
+
+    <div class="content-section reveal">
+      <h2>About the Builder</h2>
+      <p>This website was built and deployed by Moru William, a cybersecurity engineer with a background in application security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.</p>
+    </div>
+
+    <div class="back-btn-container">
+      <a href="index.html"><button class="back-btn">← Go Back to Home</button></a>
+    </div>
+  </main>
+
+  <aside>
+    <div class="sidebar-section">
+      <h3>💬 Quotes</h3>
+      <div class="quote">"The best way to predict the future is to invent it." – Alan Kay</div>
+      <div class="quote">"Cybersecurity is not a product, but a process." – Bruce Schneier</div>
+      <div class="quote">"Security is always excessive until it’s not enough." – Robbie Sinclair</div>
+    </div>
+    <div class="sidebar-section">
+      <h3>🔧 Quick Tips</h3>
+      <div class="tip">Use multi-factor authentication (MFA) on everything.</div>
+      <div class="tip">Stay updated with CVEs and industry trends.</div>
+      <div class="tip">Explore bug bounty platforms to build skills.</div>
+    </div>
+    <div class="sidebar-section">
+      <h3>🌐 Connect with Moru</h3>
+      <ul>
+        <li>🌍 Website</li>
+        <li>✉️ moruwilliam7@gmail.com</li>
+        <li>🔗 LinkedIn</li>
+        <li>🐙 GitHub</li>
+        <li>🐦 X (Twitter)</li>
+        <li>📸 Instagram</li>
+        <li>💬 Telegram</li>
+        <li>▶️ YouTube</li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <h3>📚 Learn More</h3>
+      <ul>
+        <li>🛡️ Threat Intelligence</li>
+        <li>🕵️ Bug Bounty Hunting</li>
+        <li>🎯 Red Teaming</li>
+        <li>⚙️ CTF Writeups</li>
+        <li>☁️ Cloud Security</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>&copy; 2025 <a href="mailto:moruwilliam7@gmail.com">Moru William</a>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
