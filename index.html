@@ -7,19 +7,20 @@
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #2c3e50;
-      color: #ecf0f1;
+      background-color: #1b1b2f;
+      color: #e4e4e4;
     }
 
     header {
-      background-color: #34495e;
-      padding: 10px 20px;
+      background-color: #162447;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 3px solid #0f4c75;
     }
 
     nav ul {
@@ -27,13 +28,18 @@
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 20px;
+      gap: 15px;
     }
 
     nav a {
-      color: #ecf0f1;
+      color: #00adb5;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #0f4c75;
     }
 
     .container {
@@ -48,60 +54,42 @@
 
     aside {
       flex: 1;
-      background-color: #34495e;
-      padding: 20px;
+      background-color: #162447;
+      padding: 15px;
       border-radius: 10px;
-      position: sticky;
-      top: 0;
+      width: 250px;
     }
 
     .content-section {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .image-with-caption {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      gap: 15px;
+      margin-bottom: 20px;
     }
 
-    .image-with-caption.left .caption {
-      order: -1;
+    .image-with-caption img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .image-with-caption img:hover {
+      transform: scale(1.1);
     }
 
     .image-with-caption .caption {
       flex: 1;
       font-size: 1rem;
-      color: #c1fff2;
-      max-width: 400px;
-      line-height: 1.6;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    .image-with-caption img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
-      transition: transform 0.5s ease;
-    }
-
-    .image-with-caption img:hover {
-      transform: scale(1.03);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      max-width: 300px;
+      line-height: 1.4;
     }
 
     .back-btn-container {
@@ -109,9 +97,9 @@
     }
 
     .back-btn {
-      background-color: #2980b9;
+      background-color: #0f4c75;
       color: white;
-      padding: 10px 20px;
+      padding: 10px 15px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -119,11 +107,11 @@
     }
 
     .back-btn:hover {
-      background-color: #3498db;
+      background-color: #3282b8;
     }
 
     footer {
-      background-color: #34495e;
+      background-color: #162447;
       text-align: center;
       padding: 10px;
       position: relative;
@@ -132,12 +120,13 @@
     }
 
     .sidebar-section {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     .sidebar-section h3 {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 10px;
+      color: #00adb5;
     }
 
     .sidebar-section ul {
@@ -146,44 +135,19 @@
     }
 
     .sidebar-section li {
-      margin: 10px 0;
+      margin: 5px 0;
+    }
+
+    .sidebar-section li a {
+      color: #e4e4e4;
+      text-decoration: none;
+    }
+
+    .sidebar-section li a:hover {
+      color: #0f4c75;
+      text-decoration: underline;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const quotes = [
-        '"Cybersecurity is not a product, but a process." – Bruce Schneier',
-        '"Security is always excessive until it’s not enough." – Robbie Sinclair',
-        '"The best way to predict the future is to invent it." – Alan Kay'
-      ];
-      let current = 0;
-      const quoteEls = document.querySelectorAll('.quote');
-
-      setInterval(() => {
-        quoteEls.forEach((el, idx) => {
-          el.textContent = quotes[(current + idx) % quotes.length];
-        });
-        current++;
-      }, 6000);
-
-      document.body.style.opacity = 0;
-      setTimeout(() => {
-        document.body.style.transition = 'opacity 1.2s ease-in';
-        document.body.style.opacity = 1;
-      }, 100);
-
-      const revealElements = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      revealElements.forEach(el => observer.observe(el));
-    });
-  </script>
 </head>
 <body>
 
@@ -201,34 +165,29 @@
 
 <div class="container">
   <main>
-    <div id="about-section" class="content-section reveal">
+    <div id="about-section" class="content-section">
       <h2>What The Website Is About</h2>
-      <p>This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa. Despite facing numerous challenges such as limited resources, access to premium tools, and infrastructure constraints, we remain committed to creating secure environments and systems.</p>
+      <p>This site is dedicated to showcasing the rise of cybersecurity enthusiasts in Africa...</p>
     </div>
 
-    <div class="image-with-caption left reveal">
-      <div class="caption">Resilience and determination define Africa's cybersecurity journey — fueled by open-source tools and collective innovation. Communities rise despite limitations, shaping a safer, smarter digital space.</div>
+    <div class="image-with-caption">
       <img src="images/cyber-africa-1.jpg" alt="Cyber Africa" />
+      <div class="caption">Resilience and determination define Africa's cybersecurity journey...</div>
     </div>
 
-    <div id="moru" class="content-section reveal">
+    <div id="moru" class="content-section">
       <h2>Africa Cyberspace</h2>
-      <p>Our mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, innovation, and resilience. We rely entirely on open-source tools, proving that a lack of commercial solutions is not a barrier to delivering exceptional results.</p>
+      <p>Our mission is to inspire and empower a new generation of African cybersecurity professionals...</p>
     </div>
 
-    <div class="image-with-caption reveal">
-      <img src="images/cyber-africa-2.jpg" alt="Cyber Defense" />
-      <div class="caption">Empowering communities with digital defense knowledge — because the future of Africa depends on secure networks. From student labs to enterprise deployments, we lead with skill and strategy.</div>
-    </div>
-
-    <div id="challenges" class="content-section reveal">
+    <div id="challenges" class="content-section">
       <h2>Cybersecurity in Africa</h2>
-      <p>By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.</p>
+      <p>By building strong communities...</p>
     </div>
 
-    <div id="resources" class="content-section reveal">
+    <div id="resources" class="content-section">
       <h2>About the Builder</h2>
-      <p>This website was built and deployed by Moru William, a cybersecurity engineer with a background in application security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.</p>
+      <p>This website was built and deployed by Moru William...</p>
     </div>
 
     <div class="back-btn-container">
@@ -239,23 +198,26 @@
   <aside>
     <div class="sidebar-section">
       <h3>💬 Quotes</h3>
-      <div class="quote">"The best way to predict the future is to invent it." – Alan Kay</div>
-      <div class="quote">"Cybersecurity is not a product, but a process." – Bruce Schneier</div>
-      <div class="quote">"Security is always excessive until it’s not enough." – Robbie Sinclair</div>
+      <ul>
+        <li>"Cybersecurity is not a product, but a process."</li>
+        <li>"Security is always excessive until it’s not enough."</li>
+        <li>"The best way to predict the future is to invent it."</li>
+      </ul>
     </div>
     <div class="sidebar-section">
       <h3>🔧 Quick Tips</h3>
-      <div class="tip">Use multi-factor authentication (MFA) on everything.</div>
-      <div class="tip">Stay updated with CVEs and industry trends.</div>
-      <div class="tip">Explore bug bounty platforms to build skills.</div>
-    </div>
-    <div class="sidebar-section">
-      <h3>🌐 Connect with Moru</h3>
       <ul>
-        <li>🌍 Website</li>
-        <li>✉️ moruwilliam7@gmail.com</li>
-        <li>🔗 LinkedIn</li>
-        <li>🐙 GitHub</li>
-        <li>
+        <li>Use multi-factor authentication (MFA) on everything.</li>
+        <li>Stay updated with CVEs and industry trends.</li>
+        <li>Explore bug bounty platforms to build skills.</li>
+      </ul>
+    </div>
+  </aside>
+</div>
 
+<footer>
+  <p>© 2025 Africa Cybersecurity Community</p>
+</footer>
 
+</body>
+</html>
