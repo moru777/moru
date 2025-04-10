@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <header data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
@@ -11,291 +10,283 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-  }
   
-  header {
-    background-color: #34495e;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 36px;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin: 10px 0;
-  }
-  
-  nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-  }
-  
-  nav a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #3498db;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  
-  nav a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;  /* This ensures the sidebar and content don't overlap */
-    margin: 20px;
-    gap: 20px;
-  }
-  
-  main {
-    flex: 3;
-    min-height: 500px;  /* Ensures the main content area stretches */
-  }
-  
-  aside {
-    flex: 0.8;
-    background: linear-gradient(45deg, #1a252f, #34495e);
-    padding: 20px;
-    border-radius: 10px;
-    position: sticky;
-    top: 0;
-    color: #ecf0f1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    font-size: 0.9rem;
-  }
-  
-  .content-section {
-    margin-bottom: 40px;
-  }
-  
-  .image-with-caption {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
-  
-  .image-with-caption.left .caption {
-    order: -1;
-  }
-  
-  .image-with-caption .caption {
-    flex: 1;
-    font-size: 1rem;
-    color: #c1fff2;
-    max-width: 400px;
-    line-height: 1.6;
-    font-family: 'Roboto Mono', monospace;
-  }
-  
-  .image-with-caption img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
-    transition: transform 0.5s ease;
-  }
-  
-  .image-with-caption img:hover {
-    transform: scale(1.03);
-  }
-  
-  .back-btn-container {
-    margin-top: 20px;
-  }
-  
-  .back-btn {
-    background-color: #2980b9;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .back-btn:hover {
-    background-color: #3498db;
-  }
-  
-  footer {
-    background-color: #34495e;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .sidebar-section {
-    margin-bottom: 30px;
-  }
-  
-  .sidebar-section h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #3498db;
-  }
-  
-  .sidebar-section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .sidebar-section li {
-    margin: 10px 0;
-  }
-  
-  .quote, .tip {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .sidebar-section li a {
-    color: #ecf0f1;
-    text-decoration: none;
-  }
-  
-  .sidebar-section li a:hover {
-    color: #3498db;
-  }
-  
-  /* Media Queries for smaller screens */
-  @media (max-width: 768px) {
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+
+    header {
+      background-color: #34495e;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #3498db;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
     .container {
-      flex-direction: column;
-      gap: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+      gap: 20px;
     }
-  
+
     main {
-      flex: 1;
+      flex: 3;
+      min-height: 500px;
     }
-  
+
     aside {
-      flex: 1;
-      position: relative; /* Allows the sidebar to stack below the content */
-      top: unset;
+      flex: 0.8;
+      background: linear-gradient(45deg, #1a252f, #34495e);
+      padding: 20px;
+      border-radius: 10px;
+      position: sticky;
+      top: 0;
+      color: #ecf0f1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      font-size: 0.9rem;
     }
-  }
-  
+
+    .content-section {
+      margin-bottom: 40px;
+    }
+
+    .image-with-caption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .image-with-caption.left .caption {
+      order: -1;
+    }
+
+    .image-with-caption .caption {
+      flex: 1;
+      font-size: 1rem;
+      color: #c1fff2;
+      max-width: 400px;
+      line-height: 1.6;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    .image-with-caption img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+      transition: transform 0.5s ease;
+    }
+
+    .image-with-caption img:hover {
+      transform: scale(1.03);
+    }
+
+    .back-btn-container {
+      margin-top: 20px;
+    }
+
+    .back-btn {
+      background-color: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #3498db;
+    }
+
+    footer {
+      background-color: #34495e;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 30px;
+    }
+
+    .sidebar-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #3498db;
+    }
+
+    .sidebar-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar-section li {
+      margin: 10px 0;
+    }
+
+    .quote, .tip {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-section li a {
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+
+    .sidebar-section li a:hover {
+      color: #3498db;
+    }
+
+    /* Media Queries for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      aside {
+        flex: 1;
+        position: relative;
+        top: unset;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <h1>About</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Home</a></li>
-      <li><a href="about.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Moru</a></li>
-      <li><a href="challenges.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Challenges</a></li>
-      <li><a href="resources.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Resources</a></li>
-      <li><a href="vision.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Vision</a></li>
-    </ul>
-  </nav>
-</header>
-
-<div class="container">
-  <main>
-    div class="content-section" data-aos="fade-up">
-      <h2>About The Website</h2>
-      <p>This site is dedicated to showcasing the dynamic growth of cybersecurity enthusiasts across Africa and highlighting the broader technological renaissance taking place on the continent. While cybersecurity remains at the core of my mission, it’s now clearly recognizable by all that the digital future of Africa is being shaped by more than just security alone.</p>
-      <p>Our platform seeks to inspire and empower a new generation of technologists, developers, and security professionals who are leveraging open-source tools and community-driven solutions to solve real-world problems. Despite facing challenges such as limited access to premium infrastructure and educational resources, we remain committed to building secure, innovative, and sustainable digital ecosystems that serve the unique needs of our communities.</p>
-      <p>Whether you're passionate about ethical hacking, intrigued by AI's potential, or driven by the vision of smarter, safer urban spaces, this space celebrates Africa's resilience, creativity, and untapped potential in shaping the global tech narrative.</p>
-    </div>
-
-    <div class="image-with-caption left" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
-      <div class="caption">Resilience and determination define Africa's cybersecurity journey — fueled by open-source tools and collective innovation. Communities rise despite limitations, shaping a safer, smarter digital space.</div>
-      <img src="images/cyber-security-africa.jpg" alt="Cyber Africa" />
-    </div>
-
-    <div class="content-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-      <h2>Mission Statement</h2>
-       <p>My mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, innovation, and resilience. I rely entirely on open-source tools, proving that a lack of commercial solutions is not a barrier to delivering exceptional results.</p>
-    </div>
-
-    <div class="image-with-caption" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-delay="400">
-      <img src="images/Africa-cyberspace.jpg" alt="Cyber Defense" />
-      <div class="caption">Empowering communities with digital defense knowledge — because the future of Africa depends on secure networks. From student labs to enterprise deployments, we lead with skill and strategy.</div>
-    </div>
-
-    <div class="content-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-      <h2>Cybersecurity in Africa</h2>
-      <p>By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.</p>
-    </div>
-
-    <div class="content-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-      <h2>About the Builder</h2>
-      <p>This website was built and deployed by Moru William, a cybersecurity engineer with a background in application security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.</p>
-    </div>
-
-    <div class="back-btn-container" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-      <a href="index.html"><button class="back-btn"><i class="fas fa-arrow-left"></i> Go Back to Home</button></a>
-    </div>
-  </main>
-
-  <aside data-aos="fade-left" data-aos-duration="1500" data-aos-delay="400">
-    <div class="sidebar-section">
-      <h3><i class="fas fa-quote-left"></i> Quotes</h3>
-      <div class="quote" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">"The best way to predict the future is to invent it." – Alan Kay</div>
-      <div class="quote" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">"Cybersecurity is not a product, but a process." – Bruce Schneier</div>
-      <div class="quote" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">"Security is always excessive until it’s not enough." – Robbie Sinclair</div>
-      <div class="quote" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">"The most secure system is the one that is impossible to attack." – Unknown</div>
-      <div class="quote" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">"Technology is best when it brings people together." – Matt Mullenweg</div>
-    </div>
-    <div class="sidebar-section">
-      <h3><i class="fas fa-tools"></i> Quick Tips</h3>
-      <div class="tip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Use multi-factor authentication (MFA) on everything.</div>
-      <div class="tip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Stay updated with CVEs and industry trends.</div>
-      <div class="tip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Explore bug bounty platforms to build skills.</div>
-      <div class="tip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Learn how to encrypt your data and communications.</div>
-      <div class="tip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Always back up your important data regularly.</div>
-    </div>
-    <div class="sidebar-section">
-      <h3><i class="fas fa-link"></i> Connect with Moru</h3>
+  <header data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">
+    <h1>About</h1>
+    <nav>
       <ul>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">📍 Kampala, Uganda</li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">📞 Private</li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">🌐 <a href="https://moru777.github.io/moru/" target="_blank">Website</a></li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">✉️ <a href="mailto:moruwilliam7@gmail.com">moruwilliam7@gmail.com</a></li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">🔗 <a href="https://www.linkedin.com/in/moru-william" target="_blank">LinkedIn</a></li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">🐙 <a href="https://github.com/moru777" target="_blank">GitHub</a></li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">🐦 <a href="https://twitter.com/moru_Botmaster" target="_blank">Twitter</a></li>
+        <li><a href="index.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Home</a></li>
+        <li><a href="about.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Moru</a></li>
+        <li><a href="challenges.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Challenges</a></li>
+        <li><a href="resources.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Resources</a></li>
+        <li><a href="vision.html" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">Vision</a></li>
       </ul>
-    </div>
-  </aside>
-</div>
+    </nav>
+  </header>
 
-<footer data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-  <p>&copy; 2025 Moru William. All Rights Reserved.</p>
-</footer>
+  <div class="container">
+    <main>
+      <div class="content-section" data-aos="fade-up">
+        <h2>About The Website</h2>
+        <p>This site is dedicated to showcasing the dynamic growth of cybersecurity enthusiasts across Africa...</p>
+        <p>Our platform seeks to inspire and empower a new generation of technologists, developers...</p>
+      </div>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+      <div class="image-with-caption left" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
+        <div class="caption">Resilience and determination define Africa's cybersecurity journey...</div>
+        <img src="images/cyber-security-africa.jpg" alt="Cyber Africa" />
+      </div>
+
+      <div class="content-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+        <h2>Mission Statement</h2>
+        <p>My mission is to inspire and empower a new generation of African cybersecurity professionals...</p>
+      </div>
+
+      <div class="image-with-caption" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-delay="400">
+        <img src="images/Africa-cyberspace.jpg" alt="Cyber Defense" />
+        <div class="caption">Empowering communities with digital defense knowledge...</div>
+      </div>
+
+      <div class="content-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+        <h2>Cybersecurity in Africa</h2>
+        <p>By building strong communities, sharing knowledge, and collaborating...</p>
+      </div>
+
+      <div class="content-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+        <h2>About the Builder</h2>
+        <p>This website was built and deployed by Moru William, a cybersecurity engineer...</p>
+      </div>
+
+      <div class="back-btn-container" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+        <a href="index.html"><button class="back-btn"><i class="fas fa-arrow-left"></i> Go Back to Home</button></a>
+      </div>
+    </main>
+
+    <aside data-aos="fade-left" data-aos-duration="1500" data-aos-delay="400">
+      <div class="sidebar-section">
+        <h3><i class="fas fa-quote-left"></i> Quotes</h3>
+        <div class="quote">"The best way to predict the future is to invent it." – Alan Kay</div>
+        <div class="quote">"Cybersecurity is not a product, but a process." – Bruce Schneier</div>
+      </div>
+      <div class="sidebar-section">
+        <h3><i class="fas fa-tools"></i> Quick Tips</h3>
+        <div class="tip">Use multi-factor authentication (MFA) on everything.</div>
+        <div class="tip">Stay updated with CVEs and industry trends.</div>
+      </div>
+      <div class="sidebar-section">
+        <h3><i class="fas fa-link"></i> Connect with Moru</h3>
+        <ul>
+          <li>📍 Kampala, Uganda</li>
+          <li>📞 Private</li>
+          <li>🌐 <a href="https://moru777.github.io/moru/" target="_blank">Website</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+    <p>&copy; 2025 Moru William. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
