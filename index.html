@@ -5,66 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #2c3e50;
       color: #ecf0f1;
-    }
-
-    @keyframes fadeSlideIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes bounceIn {
-      0% {
-        transform: scale(0.95);
-        opacity: 0;
-      }
-      60% {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    @keyframes slideInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
     header {
       background-color: #34495e;
       padding: 10px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: fadeSlideIn 1.2s ease-out forwards;
+      text-align: center;
+      animation: fadeInDown 1s;
     }
 
     header h1 {
       margin: 0;
       font-size: 36px;
+      font-family: 'Playfair Display', serif;
     }
 
     nav ul {
@@ -72,7 +36,9 @@
       margin: 0;
       padding: 0;
       display: flex;
+      justify-content: center;
       gap: 20px;
+      animation: fadeIn 2s;
     }
 
     nav a {
@@ -80,28 +46,32 @@
       text-decoration: none;
       font-size: 18px;
       position: relative;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
 
     nav a::after {
-      content: "";
+      content: '';
       position: absolute;
+      width: 100%;
+      height: 2px;
       bottom: -4px;
       left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: #ecf0f1;
-      transition: width 0.3s ease;
+      background-color: #3498db;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: bottom right;
     }
 
     nav a:hover::after {
-      width: 100%;
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
 
     .container {
       display: flex;
       margin: 20px;
       gap: 20px;
+      animation: fadeInUp 1.5s;
     }
 
     main {
@@ -118,7 +88,6 @@
       color: #ecf0f1;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
       font-size: 0.9rem;
-      animation: slideInLeft 1s ease-out;
     }
 
     .content-section {
@@ -145,6 +114,7 @@
       max-width: 400px;
       line-height: 1.6;
       text-shadow: 1px 1px 2px #000;
+      font-family: 'Roboto Mono', monospace;
     }
 
     .image-with-caption img {
@@ -153,7 +123,6 @@
       border-radius: 15px;
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
       transition: transform 0.5s ease;
-      animation: bounceIn 1s ease-in-out;
     }
 
     .image-with-caption img:hover {
@@ -169,7 +138,6 @@
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
-      animation: fadeSlideIn 1s ease forwards;
     }
 
     .back-btn-container {
@@ -184,12 +152,11 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     .back-btn:hover {
       background-color: #3498db;
-      transform: scale(1.05);
     }
 
     footer {
@@ -199,6 +166,7 @@
       position: relative;
       bottom: 0;
       width: 100%;
+      font-size: 0.9rem;
     }
 
     .sidebar-section {
@@ -236,49 +204,12 @@
       color: #3498db;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const quotes = [
-        '"Cybersecurity is not a product, but a process." – Bruce Schneier',
-        '"Security is always excessive until it’s not enough." – Robbie Sinclair',
-        '"The best way to predict the future is to invent it." – Alan Kay',
-        '"The most secure system is the one that is impossible to attack." – Unknown',
-        '"Technology is best when it brings people together." – Matt Mullenweg'
-      ];
-      let current = 0;
-      const quoteEls = document.querySelectorAll('.quote');
-
-      setInterval(() => {
-        quoteEls.forEach((el, idx) => {
-          el.textContent = quotes[(current + idx) % quotes.length];
-        });
-        current++;
-      }, 6000);
-
-      document.body.style.opacity = 0;
-      setTimeout(() => {
-        document.body.style.transition = 'opacity 1.2s ease-in';
-        document.body.style.opacity = 1;
-      }, 100);
-
-      const revealElements = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      revealElements.forEach(el => observer.observe(el));
-    });
-  </script>
 </head>
 <body>
 <header>
-  <h1>About</h1>
+  <h1 class="animate__animated animate__fadeInDown">About</h1>
   <nav>
-    <ul>
+    <ul class="animate__animated animate__fadeIn">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">Moru</a></li>
       <li><a href="challenges.html">Challenges</a></li>
@@ -288,44 +219,45 @@
   </nav>
 </header>
 
+
 <div class="container">
   <main>
     <div id="about-section" class="content-section reveal">
       <h2>About The Website</h2>
       <p>
-        This site is dedicated to showcasing the dynamic growth of cybersecurity enthusiasts across Africa and highlighting the broader technological renaissance taking place on the continent...
+        This site is dedicated to showcasing the dynamic growth of cybersecurity enthusiasts across Africa and highlighting the broader technological renaissance taking place on the continent. While cybersecurity remains at the core of my mission, it’s now clearly recognizable by all that the digital future of Africa is being shaped by more than just security alone. From the rise of artificial intelligence (AI) and the rollout of 5G networks to the emergence of smart city initiatives and grassroots innovation hubs, Africa is stepping boldly into the next era of digital transformation.
       </p>
       <p>
-        Our platform seeks to inspire and empower a new generation of technologists, developers, and security professionals...
+        Our platform seeks to inspire and empower a new generation of technologists, developers, and security professionals who are leveraging open-source tools and community-driven solutions to solve real-world problems. Despite facing challenges such as limited access to premium infrastructure and educational resources, we remain committed to building secure, innovative, and sustainable digital ecosystems that serve the unique needs of our communities.
       </p>
       <p>
-        Whether you're passionate about ethical hacking, intrigued by AI's potential, or driven by the vision of smarter, safer urban spaces...
+        Whether you're passionate about ethical hacking, intrigued by AI's potential, or driven by the vision of smarter, safer urban spaces, this space celebrates Africa's resilience, creativity, and untapped potential in shaping the global tech narrative.
       </p>
     </div>
 
     <div class="image-with-caption left reveal">
-      <div class="caption">Resilience and determination define Africa's cybersecurity journey...</div>
+      <div class="caption">Resilience and determination define Africa's cybersecurity journey — fueled by open-source tools and collective innovation. Communities rise despite limitations, shaping a safer, smarter digital space.</div>
       <img src="images/cyber-security-africa.jpg" alt="Cyber Africa" />
     </div>
 
     <div id="moru" class="content-section reveal">
       <h2>Mission Statement</h2>
-      <p>My mission is to inspire and empower a new generation of African cybersecurity professionals...</p>
+      <p>My mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, innovation, and resilience. I rely entirely on open-source tools, proving that a lack of commercial solutions is not a barrier to delivering exceptional results.</p>
     </div>
 
     <div class="image-with-caption reveal">
       <img src="images/Africa-cyberspace.jpg" alt="Cyber Defense" />
-      <div class="caption">Empowering communities with digital defense knowledge...</div>
+      <div class="caption">Empowering communities with digital defense knowledge — because the future of Africa depends on secure networks. From student labs to enterprise deployments, we lead with skill and strategy.</div>
     </div>
 
     <div id="challenges" class="content-section reveal">
       <h2>Cybersecurity in Africa</h2>
-      <p>By building strong communities, sharing knowledge, and collaborating across the continent...</p>
+      <p>By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.</p>
     </div>
 
     <div id="resources" class="content-section reveal">
       <h2>About the Builder</h2>
-      <p>This website was built and deployed by Moru William...</p>
+      <p>This website was built and deployed by Moru William, a cybersecurity engineer with a background in application security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.</p>
     </div>
 
     <div class="back-btn-container">
