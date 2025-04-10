@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenges</title>
+    
+    <!-- External CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts for custom fonts (e.g., Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Global styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;  /* Use Google Font 'Roboto' */
             margin: 0;
             padding: 0;
             position: relative;
@@ -35,11 +42,14 @@
         .image-container {
             text-align: center;
             margin: 20px 0;
+            width: 100%;
         }
 
         .responsive-img {
             max-width: 100%;
             height: auto;
+            display: block; /* Ensures image behaves as a block element, no extra space below */
+            margin: 0 auto; /* Center the image */
         }
 
         /* Side content styling */
