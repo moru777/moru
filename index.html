@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body {
@@ -15,14 +17,12 @@
       padding: 0;
       background-color: #2c3e50;
       color: #ecf0f1;
-      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
     header {
       background-color: #34495e;
       padding: 10px 20px;
       text-align: center;
-      animation: fadeInDown 1s;
     }
 
     header h1 {
@@ -33,12 +33,11 @@
 
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center;
       gap: 20px;
-      animation: fadeIn 2s;
+      padding: 0;
+      margin: 10px 0;
     }
 
     nav a {
@@ -46,7 +45,6 @@
       text-decoration: none;
       font-size: 18px;
       position: relative;
-      transition: color 0.3s;
     }
 
     nav a::after {
@@ -59,19 +57,16 @@
       background-color: #3498db;
       transform: scaleX(0);
       transition: transform 0.3s ease;
-      transform-origin: bottom right;
     }
 
     nav a:hover::after {
       transform: scaleX(1);
-      transform-origin: bottom left;
     }
 
     .container {
       display: flex;
       margin: 20px;
       gap: 20px;
-      animation: fadeInUp 1.5s;
     }
 
     main {
@@ -113,7 +108,6 @@
       color: #c1fff2;
       max-width: 400px;
       line-height: 1.6;
-      text-shadow: 1px 1px 2px #000;
       font-family: 'Roboto Mono', monospace;
     }
 
@@ -129,17 +123,6 @@
       transform: scale(1.03);
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     .back-btn-container {
       margin-top: 20px;
     }
@@ -152,7 +135,6 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s ease;
     }
 
     .back-btn:hover {
@@ -163,9 +145,6 @@
       background-color: #34495e;
       text-align: center;
       padding: 10px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
       font-size: 0.9rem;
     }
 
@@ -206,10 +185,10 @@
   </style>
 </head>
 <body>
-<header>
-  <h1 class="animate__animated animate__fadeInDown">About</h1>
+<header data-aos="fade-down">
+  <h1>About</h1>
   <nav>
-    <ul class="animate__animated animate__fadeIn">
+    <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">Moru</a></li>
       <li><a href="challenges.html">Challenges</a></li>
@@ -219,55 +198,48 @@
   </nav>
 </header>
 
-
 <div class="container">
   <main>
-    <div id="about-section" class="content-section reveal">
+    <div class="content-section" data-aos="fade-up">
       <h2>About The Website</h2>
-      <p>
-        This site is dedicated to showcasing the dynamic growth of cybersecurity enthusiasts across Africa and highlighting the broader technological renaissance taking place on the continent. While cybersecurity remains at the core of my mission, it’s now clearly recognizable by all that the digital future of Africa is being shaped by more than just security alone. From the rise of artificial intelligence (AI) and the rollout of 5G networks to the emergence of smart city initiatives and grassroots innovation hubs, Africa is stepping boldly into the next era of digital transformation.
-      </p>
-      <p>
-        Our platform seeks to inspire and empower a new generation of technologists, developers, and security professionals who are leveraging open-source tools and community-driven solutions to solve real-world problems. Despite facing challenges such as limited access to premium infrastructure and educational resources, we remain committed to building secure, innovative, and sustainable digital ecosystems that serve the unique needs of our communities.
-      </p>
-      <p>
-        Whether you're passionate about ethical hacking, intrigued by AI's potential, or driven by the vision of smarter, safer urban spaces, this space celebrates Africa's resilience, creativity, and untapped potential in shaping the global tech narrative.
-      </p>
+      <p>This site is dedicated to showcasing the dynamic growth of cybersecurity enthusiasts across Africa and highlighting the broader technological renaissance taking place on the continent. While cybersecurity remains at the core of my mission, it’s now clearly recognizable by all that the digital future of Africa is being shaped by more than just security alone.</p>
+      <p>Our platform seeks to inspire and empower a new generation of technologists, developers, and security professionals who are leveraging open-source tools and community-driven solutions to solve real-world problems. Despite facing challenges such as limited access to premium infrastructure and educational resources, we remain committed to building secure, innovative, and sustainable digital ecosystems that serve the unique needs of our communities.</p>
+      <p>Whether you're passionate about ethical hacking, intrigued by AI's potential, or driven by the vision of smarter, safer urban spaces, this space celebrates Africa's resilience, creativity, and untapped potential in shaping the global tech narrative.</p>
     </div>
 
-    <div class="image-with-caption left reveal">
+    <div class="image-with-caption left" data-aos="zoom-in">
       <div class="caption">Resilience and determination define Africa's cybersecurity journey — fueled by open-source tools and collective innovation. Communities rise despite limitations, shaping a safer, smarter digital space.</div>
       <img src="images/cyber-security-africa.jpg" alt="Cyber Africa" />
     </div>
 
-    <div id="moru" class="content-section reveal">
+    <div class="content-section" data-aos="fade-up">
       <h2>Mission Statement</h2>
       <p>My mission is to inspire and empower a new generation of African cybersecurity professionals who are driven by passion, innovation, and resilience. I rely entirely on open-source tools, proving that a lack of commercial solutions is not a barrier to delivering exceptional results.</p>
     </div>
 
-    <div class="image-with-caption reveal">
+    <div class="image-with-caption" data-aos="zoom-in-up">
       <img src="images/Africa-cyberspace.jpg" alt="Cyber Defense" />
       <div class="caption">Empowering communities with digital defense knowledge — because the future of Africa depends on secure networks. From student labs to enterprise deployments, we lead with skill and strategy.</div>
     </div>
 
-    <div id="challenges" class="content-section reveal">
+    <div class="content-section" data-aos="fade-up">
       <h2>Cybersecurity in Africa</h2>
       <p>By building strong communities, sharing knowledge, and collaborating across the continent, we aim to bridge the gap in cybersecurity and ensure a safer digital future for Africa. Together, we tackle modern-day security challenges, foster local talent, and advocate for the use of open-source solutions to drive sustainable growth in the tech and security sectors.</p>
     </div>
 
-    <div id="resources" class="content-section reveal">
+    <div class="content-section" data-aos="fade-up">
       <h2>About the Builder</h2>
       <p>This website was built and deployed by Moru William, a cybersecurity engineer with a background in application security engineering, ethical hacking, cloud security engineering, and cybersecurity consultancy. Despite not being a developer by profession, Moru leveraged his extensive expertise in cybersecurity to create and deploy this site using GitHub Pages. The site aims to support and inspire a growing community of cybersecurity professionals in Africa.</p>
     </div>
 
-    <div class="back-btn-container">
-      <a href="index.html"><button class="back-btn">← Go Back to Home</button></a>
+    <div class="back-btn-container" data-aos="fade-up">
+      <a href="index.html"><button class="back-btn"><i class="fas fa-arrow-left"></i> Go Back to Home</button></a>
     </div>
   </main>
 
-  <aside>
+  <aside data-aos="fade-left">
     <div class="sidebar-section">
-      <h3>💬 Quotes</h3>
+      <h3><i class="fas fa-quote-left"></i> Quotes</h3>
       <div class="quote">"The best way to predict the future is to invent it." – Alan Kay</div>
       <div class="quote">"Cybersecurity is not a product, but a process." – Bruce Schneier</div>
       <div class="quote">"Security is always excessive until it’s not enough." – Robbie Sinclair</div>
@@ -275,7 +247,7 @@
       <div class="quote">"Technology is best when it brings people together." – Matt Mullenweg</div>
     </div>
     <div class="sidebar-section">
-      <h3>🔧 Quick Tips</h3>
+      <h3><i class="fas fa-tools"></i> Quick Tips</h3>
       <div class="tip">Use multi-factor authentication (MFA) on everything.</div>
       <div class="tip">Stay updated with CVEs and industry trends.</div>
       <div class="tip">Explore bug bounty platforms to build skills.</div>
@@ -283,7 +255,7 @@
       <div class="tip">Always back up your important data regularly.</div>
     </div>
     <div class="sidebar-section">
-      <h3>🌐 Connect with Moru</h3>
+      <h3><i class="fas fa-link"></i> Connect with Moru</h3>
       <ul>
         <li>📍 Kampala, Uganda</li>
         <li>📞 Private</li>
@@ -297,8 +269,13 @@
   </aside>
 </div>
 
-<footer>
+<footer data-aos="fade-up">
   <p>&copy; 2025 Moru William. All Rights Reserved.</p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
