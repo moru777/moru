@@ -14,13 +14,15 @@
     <style>
         /* Global styles */
         body {
-            font-family: 'Roboto', Arial, sans-serif;  /* Use Google Font 'Roboto' */
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             position: relative;
             min-height: 100vh;
             background-color: #121212;
             color: #e0e0e0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;  /* Fade-in effect */
         }
 
         header {
@@ -28,11 +30,13 @@
             color: white;
             padding: 20px;
             text-align: center;
+            animation: slideInTop 1s ease-out;
         }
 
         main {
             padding: 20px;
             margin-bottom: 50px;
+            animation: slideInMain 1.5s ease-out;
         }
 
         section {
@@ -43,13 +47,16 @@
             text-align: center;
             margin: 20px 0;
             width: 100%;
+            animation: fadeIn 2s forwards;
         }
 
         .responsive-img {
             max-width: 100%;
             height: auto;
-            display: block; /* Ensures image behaves as a block element, no extra space below */
-            margin: 0 auto; /* Center the image */
+            display: block;
+            margin: 0 auto;
+            opacity: 0;
+            animation: imageFadeIn 2s forwards;
         }
 
         /* Side content styling */
@@ -62,28 +69,34 @@
             text-align: left;
             width: 250px;
             margin: 10px;
+            opacity: 0;
+            animation: slideInAside 1.5s ease-out forwards;
         }
 
         /* Right-side adverts */
         .side-advert {
             top: 10%;
             right: 10px;
+            animation-delay: 0.5s;
         }
 
         .resources {
             top: 30%;
             right: 10px;
+            animation-delay: 1s;
         }
 
         .latest-news {
             top: 50%;
             right: 10px;
+            animation-delay: 1.5s;
         }
 
         /* Left-side adverts */
         .testimonials {
             bottom: 10%;
             left: 10px;
+            animation-delay: 2s;
         }
 
         .social-media {
@@ -93,6 +106,7 @@
             padding: 10px;
             border-radius: 8px;
             text-align: center;
+            animation-delay: 2.5s;
         }
 
         .social-media a {
@@ -139,6 +153,64 @@
                 margin: 10px 0;
             }
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInTop {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInMain {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInAside {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes imageFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Hover Effects */
+        a:hover {
+            text-decoration: underline;
+            color: #ff6347;
+        }
+
+        .responsive-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
     </style>
 </head>
 <body>
