@@ -5,59 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Moru</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212; /* Dark background for tech feel */
-            color: #e0e0e0; /* Lighter text for readability */
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
+
         header {
-            background-color: #1f1f1f; /* Slightly lighter for contrast */
+            background-color: #1f1f1f;
             padding: 20px;
             color: #fff;
             text-align: center;
             position: relative;
+            animation: fadeInDown 1s;
         }
+
         header h1 {
             margin: 0;
+            font-size: 36px;
+            font-family: 'Playfair Display', serif;
         }
+
         main {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding: 20px;
+            animation: fadeInUp 1.5s;
         }
+
         section {
             width: 70%;
             margin-right: 20px;
         }
+
         .sidebar {
             width: 25%;
             background-color: #292929;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeInRight 1.5s;
         }
+
         .sidebar h3 {
             color: #4caf50;
         }
+
         .sidebar ul {
             list-style-type: none;
             padding: 0;
         }
+
         .sidebar ul li {
             padding: 8px 0;
             border-bottom: 1px solid #444;
         }
+
         .sidebar ul li a {
             color: #e0e0e0;
             text-decoration: none;
         }
+
         .sidebar ul li a:hover {
             text-decoration: underline;
         }
+
         footer {
             background-color: #1f1f1f;
             color: #e0e0e0;
@@ -67,19 +87,23 @@
             bottom: 0;
             width: 100%;
         }
+
         a {
             color: #4caf50;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .quote {
             font-style: italic;
             margin-top: 20px;
             font-size: 18px;
-            color: limegreen; /* Lime green color */
+            color: limegreen;
             text-align: center;
         }
+
         .back-home {
             display: block;
             width: fit-content;
@@ -92,21 +116,41 @@
             font-size: 14px;
             text-align: center;
         }
+
         .back-home:hover {
             background-color: #45a049;
         }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>About Moru William</h1>
+        <h1 class="animate__animated animate__fadeInDown">About Moru William</h1>
     </header>
 
     <main>
         <section>
-            <div style="text-align: center; margin-bottom: 20px;">
+            <div class="image-container">
                 <a href="images/output.png" target="_blank">
-                    <img src="images/output.png" alt="Moru William" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid #333;">
+                    <img src="images/output.png" alt="Moru William">
                 </a>
             </div>
 
@@ -147,7 +191,7 @@
             <h3>Education</h3>
             <ul>
                 <li><strong>Bachelor of Science in Cybersecurity Technology</strong> - University of Maryland Global Campus</li>
-                <li><strong>Advanced Diploma in Cybersecurity</strong> </li>
+                <li><strong>Advanced Diploma in Cybersecurity</strong> - (Institute of Cybersecurity)</li>
             </ul>
 
             <h3>Industry Certifications</h3>
