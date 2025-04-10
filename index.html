@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <header data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
@@ -10,182 +11,201 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #2c3e50;
-      color: #ecf0f1;
-    }
-
-    header {
-      background-color: #34495e;
-      padding: 10px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 0;
-      margin: 10px 0;
-    }
-
-    nav a {
-      color: #ecf0f1;
-      text-decoration: none;
-      font-size: 18px;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #3498db;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-
-    nav a:hover::after {
-      transform: scaleX(1);
-    }
-
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  header {
+    background-color: #34495e;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;  /* This ensures the sidebar and content don't overlap */
+    margin: 20px;
+    gap: 20px;
+  }
+  
+  main {
+    flex: 3;
+    min-height: 500px;  /* Ensures the main content area stretches */
+  }
+  
+  aside {
+    flex: 0.8;
+    background: linear-gradient(45deg, #1a252f, #34495e);
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    color: #ecf0f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+  }
+  
+  .image-with-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .image-with-caption.left .caption {
+    order: -1;
+  }
+  
+  .image-with-caption .caption {
+    flex: 1;
+    font-size: 1rem;
+    color: #c1fff2;
+    max-width: 400px;
+    line-height: 1.6;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .image-with-caption img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    transition: transform 0.5s ease;
+  }
+  
+  .image-with-caption img:hover {
+    transform: scale(1.03);
+  }
+  
+  .back-btn-container {
+    margin-top: 20px;
+  }
+  
+  .back-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .back-btn:hover {
+    background-color: #3498db;
+  }
+  
+  footer {
+    background-color: #34495e;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+  
+  .sidebar-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #3498db;
+  }
+  
+  .sidebar-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar-section li {
+    margin: 10px 0;
+  }
+  
+  .quote, .tip {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-section li a {
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .sidebar-section li a:hover {
+    color: #3498db;
+  }
+  
+  /* Media Queries for smaller screens */
+  @media (max-width: 768px) {
     .container {
-      display: flex;
-      margin: 20px;
-      gap: 20px;
+      flex-direction: column;
+      gap: 30px;
     }
-
+  
     main {
-      flex: 3;
-    }
-
-    aside {
-      flex: 0.8;
-      background: linear-gradient(45deg, #1a252f, #34495e);
-      padding: 20px;
-      border-radius: 10px;
-      position: sticky;
-      top: 0;
-      color: #ecf0f1;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-      font-size: 0.9rem;
-    }
-
-    .content-section {
-      margin-bottom: 40px;
-    }
-
-    .image-with-caption {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .image-with-caption.left .caption {
-      order: -1;
-    }
-
-    .image-with-caption .caption {
       flex: 1;
-      font-size: 1rem;
-      color: #c1fff2;
-      max-width: 400px;
-      line-height: 1.6;
-      font-family: 'Roboto Mono', monospace;
     }
-
-    .image-with-caption img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
-      transition: transform 0.5s ease;
+  
+    aside {
+      flex: 1;
+      position: relative; /* Allows the sidebar to stack below the content */
+      top: unset;
     }
-
-    .image-with-caption img:hover {
-      transform: scale(1.03);
-    }
-
-    .back-btn-container {
-      margin-top: 20px;
-    }
-
-    .back-btn {
-      background-color: #2980b9;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .back-btn:hover {
-      background-color: #3498db;
-    }
-
-    footer {
-      background-color: #34495e;
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9rem;
-    }
-
-    .sidebar-section {
-      margin-bottom: 30px;
-    }
-
-    .sidebar-section h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #3498db;
-    }
-
-    .sidebar-section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .sidebar-section li {
-      margin: 10px 0;
-    }
-
-    .quote, .tip {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    .sidebar-section li a {
-      color: #ecf0f1;
-      text-decoration: none;
-    }
-
-    .sidebar-section li a:hover {
-      color: #3498db;
-    }
-  </style>
+  }
+  
 </head>
 <body>
-<header data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">
+
   <h1>About</h1>
   <nav>
     <ul>
