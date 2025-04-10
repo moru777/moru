@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #121212; /* Dark theme for tech feel */
+            color: #e0e0e0; /* Lighter text for readability */
             position: relative;
             min-height: 100vh;
         }
 
         header {
-            background-color: #333;
+            background-color: #1f1f1f;
             color: white;
             padding: 20px;
             text-align: center;
@@ -23,10 +25,21 @@
 
         main {
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
         }
 
         section {
-            margin-bottom: 20px;
+            width: 70%;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #292929;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .image-container {
@@ -37,87 +50,51 @@
         .responsive-img {
             max-width: 100%;
             height: auto;
-        }
-
-        /* Side content styling */
-        aside {
-            position: fixed;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 15px;
             border-radius: 8px;
-            text-align: left;
-            width: 250px;
-            margin: 10px;
         }
 
-        /* Right-side adverts */
-        .side-advert {
-            top: 10%;
-            right: 10px;
-        }
-
-        .resources {
-            top: 30%;
-            right: 10px;
-        }
-
-        .latest-news {
-            top: 50%;
-            right: 10px;
-        }
-
-        /* Left-side adverts */
-        .testimonials {
-            bottom: 10%;
-            left: 10px;
-        }
-
-        .social-media {
-            bottom: 10%;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 8px;
+        .quote {
+            font-style: italic;
+            font-size: 18px;
+            color: limegreen;
             text-align: center;
+            margin-top: 20px;
         }
 
         .social-media a {
-            color: white;
+            color: #4caf50;
             text-decoration: none;
-            margin: 5px;
             font-size: 16px;
+            margin: 5px;
         }
 
-        /* Media Queries for Mobile */
+        .side-advert img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .back-home:hover {
+            background-color: #45a049;
+        }
+
         @media screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
             aside {
-                position: relative;
-                width: 100%;
-                margin: 20px 0;
-            }
-
-            .side-advert, .resources, .latest-news, .testimonials {
-                position: relative;
-                margin: 10px 0;
-                width: 100%;
-                top: auto;
-                right: auto;
-                bottom: auto;
-            }
-
-            .social-media {
-                position: relative;
                 width: 100%;
                 margin-top: 20px;
-            }
-
-            .side-advert, .resources, .latest-news, .testimonials, .social-media {
-                margin: 10px 0;
-            }
-
-            .image-container {
-                margin: 10px 0;
             }
         }
     </style>
@@ -142,11 +119,11 @@
                 Despite these obstacles, we continue to innovate, learn, and build secure systems that 
                 rival global standards.
             </p>
+
             <div class="image-container">
                 <img src="images/systems.jpg" alt="Cybersecurity Tools Types" class="responsive-img">
             </div>
 
-            <!-- Positive reinforcement -->
             <p>
                 As we face these challenges, the cybersecurity community in Africa continues to make remarkable strides, 
                 building a safer and more resilient digital future for all.
@@ -160,39 +137,40 @@
                 Together, we are proving that resourcefulness, determination, and knowledge can overcome any barrier, ensuring a secure 
                 and thriving digital ecosystem for businesses, individuals, and governments alike.
             </p>
+
+            <div class="quote">
+                <p>"Innovation is the key to overcoming cybersecurity challenges." - Anonymous</p>
+            </div>
+
+            <p><a href="index.html" class="back-home">&larr; Go Back to Home</a></p>
         </section>
 
-        <section>
-            <p><a href="index.html">&larr; Go Back to Home</a></p>
-        </section>
+        <!-- Sidebar content -->
+        <aside>
+            <h3>Sponsored by Moru William</h3>
+            <img src="africa.jpg" alt="Cybersecurity Ad" />
+            <p>Learn more about the latest cybersecurity trends and tools.</p>
+        </aside>
+
+        <aside>
+            <h3>Resources for Cybersecurity Enthusiasts</h3>
+            <ul>
+                <li><a href="https://www.cybrary.it/">Cybrary - Free Cybersecurity Courses</a></li>
+                <li><a href="https://www.sans.org/cyber-security-courses/">SANS Cybersecurity Training</a></li>
+                <li><a href="https://www.linkedin.com/groups/2055227/">Cybersecurity LinkedIn Group</a></li>
+            </ul>
+        </aside>
+
+        <aside>
+            <h3>Latest in Cybersecurity</h3>
+            <p><strong>Cybersecurity Conference 2025</strong> - Join experts from across the world in Nairobi for the upcoming cybersecurity conference.</p>
+            <p><strong>New Research on African Cybersecurity Trends</strong> - Read the latest report on emerging cybersecurity threats in Africa.</p>
+        </aside>
     </main>
 
     <footer>
         <p>&copy; 2025 Moru William. All Rights Reserved.</p>
     </footer>
-
-    <!-- Side content -->
-    <!-- Right-side adverts -->
-    <aside class="side-advert">
-        <h3>Sponsored by Moru William</h3>
-        <img src="africa.jpg" alt="Cybersecurity Ad" />
-        <p>Learn more about the latest cybersecurity trends and tools.</p>
-    </aside>
-
-    <aside class="resources">
-        <h3>Resources for Cybersecurity Enthusiasts</h3>
-        <ul>
-            <li><a href="https://www.cybrary.it/">Cybrary - Free Cybersecurity Courses</a></li>
-            <li><a href="https://www.sans.org/cyber-security-courses/">SANS Cybersecurity Training</a></li>
-            <li><a href="https://www.linkedin.com/groups/2055227/">Cybersecurity LinkedIn Group</a></li>
-        </ul>
-    </aside>
-
-    <aside class="latest-news">
-        <h3>Latest in Cybersecurity</h3>
-        <p><strong>Cybersecurity Conference 2025</strong> - Join experts from across the world in Nairobi for the upcoming cybersecurity conference.</p>
-        <p><strong>New Research on African Cybersecurity Trends</strong> - Read the latest report on emerging cybersecurity threats in Africa.</p>
-    </aside>
 
     <!-- Left-side adverts -->
     <aside class="testimonials">
