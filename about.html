@@ -40,13 +40,12 @@ main {
     justify-content: space-between;
     padding: 20px;
     animation: fadeInUp 1.5s;
-    flex-wrap: wrap; /* Allow the layout to wrap on smaller screens */
+    flex-wrap: nowrap; /* Prevent layout from wrapping */
 }
 
 section {
     width: 70%;
     margin-right: 20px;
-    flex: 1 1 100%; /* Make section responsive */
 }
 
 .sidebar {
@@ -56,8 +55,6 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     animation: fadeInSidebar 1.5s ease-in-out;
-    margin-top: 20px; /* Prevent sticking to top */
-    flex: 1 1 100%; /* Make sidebar responsive */
 }
 
 .sidebar h3 {
