@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        @keyframes fadeInSidebar {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #121212;
+            background-color: #0a0a0a; /* Darker background */
             color: #e0e0e0;
             margin: 0;
             padding: 0;
@@ -19,7 +30,7 @@
         }
 
         header {
-            background-color: #1f1f1f;
+            background-color: #232323; /* Darker header */
             padding: 20px;
             color: #fff;
             text-align: center;
@@ -31,6 +42,7 @@
             margin: 0;
             font-size: 36px;
             font-family: 'Playfair Display', serif;
+            color: #00e676; /* Green for professional, innovative feel */
         }
 
         main {
@@ -48,15 +60,15 @@
 
         .sidebar {
             width: 25%;
-            background-color: #292929;
+            background-color: #1d1d1d; /* Darker gray for sidebar */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            animation: fadeInRight 1.5s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            animation: fadeInSidebar 1.5s ease-in-out;
         }
 
         .sidebar h3 {
-            color: #4caf50;
+            color: #00e676; /* Green for sidebar headers */
         }
 
         .sidebar ul {
@@ -70,16 +82,16 @@
         }
 
         .sidebar ul li a {
-            color: #e0e0e0;
+            color: #b0bec5; /* Lighter gray text */
             text-decoration: none;
         }
 
         .sidebar ul li a:hover {
-            text-decoration: underline;
+            color: #00e676; /* Green hover effect */
         }
 
         footer {
-            background-color: #1f1f1f;
+            background-color: #232323;
             color: #e0e0e0;
             text-align: center;
             padding: 10px;
@@ -89,7 +101,7 @@
         }
 
         a {
-            color: #4caf50;
+            color: #00e676; /* Green for links */
         }
 
         a:hover {
@@ -100,7 +112,7 @@
             font-style: italic;
             margin-top: 20px;
             font-size: 18px;
-            color: limegreen;
+            color: #00e676;
             text-align: center;
         }
 
@@ -108,7 +120,7 @@
             display: block;
             width: fit-content;
             margin: 20px auto 0;
-            background-color: #4caf50;
+            background-color: #00e676;
             color: white;
             padding: 10px 15px;
             text-decoration: none;
@@ -118,7 +130,7 @@
         }
 
         .back-home:hover {
-            background-color: #45a049;
+            background-color: #00c853; /* Darker green on hover */
         }
 
         .image-container {
@@ -229,3 +241,4 @@
     </footer>
 </body>
 </html>
+
