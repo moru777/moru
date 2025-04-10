@@ -24,7 +24,7 @@
             opacity: 0;
             animation: fadeIn 2s forwards;  /* Fade-in effect */
         }
-
+    
         header {
             background-color: #333;
             color: white;
@@ -32,24 +32,24 @@
             text-align: center;
             animation: slideInTop 1s ease-out;
         }
-
+    
         main {
             padding: 20px;
             margin-bottom: 50px;
             animation: slideInMain 1.5s ease-out;
         }
-
+    
         section {
             margin-bottom: 20px;
         }
-
+    
         .image-container {
             text-align: center;
             margin: 20px 0;
             width: 100%;
             animation: fadeIn 2s forwards;
         }
-
+    
         .responsive-img {
             max-width: 100%;
             height: auto;
@@ -58,7 +58,7 @@
             opacity: 0;
             animation: imageFadeIn 2s forwards;
         }
-
+    
         /* Side content styling */
         aside {
             position: fixed;
@@ -72,33 +72,33 @@
             opacity: 0;
             animation: slideInAside 1.5s ease-out forwards;
         }
-
+    
         /* Right-side adverts */
         .side-advert {
             top: 10%;
             right: 10px;
-            animation-delay: 0.5s;
+            animation-delay: 0.5s; /* Add delay for better sequencing */
         }
-
+    
         .resources {
             top: 30%;
             right: 10px;
             animation-delay: 1s;
         }
-
+    
         .latest-news {
             top: 50%;
             right: 10px;
             animation-delay: 1.5s;
         }
-
+    
         /* Left-side adverts */
         .testimonials {
             bottom: 10%;
             left: 10px;
             animation-delay: 2s;
         }
-
+    
         .social-media {
             bottom: 10%;
             left: 10px;
@@ -108,28 +108,28 @@
             text-align: center;
             animation-delay: 2.5s;
         }
-
+    
         .social-media a {
             color: white;
             text-decoration: none;
             margin: 5px;
             font-size: 16px;
         }
-
+    
         /* Media Queries for Mobile */
         @media screen and (max-width: 768px) {
             main {
                 padding: 20px;
                 margin-bottom: 20px;
             }
-
+    
             /* Adjust side content for mobile */
             aside {
                 position: relative;
                 width: 100%;
                 margin: 20px 0;
             }
-
+    
             .side-advert, .resources, .latest-news, .testimonials {
                 position: relative;
                 margin: 10px 0;
@@ -138,22 +138,22 @@
                 right: auto;
                 bottom: auto;
             }
-
+    
             .social-media {
                 position: relative;
                 width: 100%;
                 margin-top: 20px;
             }
-
+    
             .side-advert, .resources, .latest-news, .testimonials, .social-media {
                 margin: 10px 0;
             }
-
+    
             .image-container {
                 margin: 10px 0;
             }
         }
-
+    
         /* Animations */
         @keyframes fadeIn {
             0% {
@@ -163,7 +163,7 @@
                 opacity: 1;
             }
         }
-
+    
         @keyframes slideInTop {
             0% {
                 transform: translateY(-100%);
@@ -172,7 +172,7 @@
                 transform: translateY(0);
             }
         }
-
+    
         @keyframes slideInMain {
             0% {
                 transform: translateX(-100%);
@@ -181,16 +181,18 @@
                 transform: translateX(0);
             }
         }
-
+    
         @keyframes slideInAside {
             0% {
                 transform: translateX(100%);
+                opacity: 0;  /* Ensure opacity starts at 0 */
             }
             100% {
                 transform: translateX(0);
+                opacity: 1;  /* Ensure opacity reaches 1 */
             }
         }
-
+    
         @keyframes imageFadeIn {
             0% {
                 opacity: 0;
@@ -199,19 +201,20 @@
                 opacity: 1;
             }
         }
-
+    
         /* Hover Effects */
         a:hover {
             text-decoration: underline;
             color: #ff6347;
         }
-
+    
         .responsive-img:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease-in-out;
         }
-
+    
     </style>
+    
 </head>
 <body>
     <header>
