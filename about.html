@@ -51,11 +51,13 @@
             justify-content: space-between;
             padding: 20px;
             animation: fadeInUp 1.5s;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
 
         section {
             width: 70%;
             margin-right: 20px;
+            padding-right: 20px;
         }
 
         .sidebar {
@@ -151,6 +153,37 @@
             transform: scale(1.05);
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-top: 20px;
+                animation: none; /* Remove animation on mobile for faster load */
+            }
+
+            section {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px; /* Reduce font size on smaller screens */
+            }
+
+            .sidebar h3 {
+                font-size: 18px; /* Smaller headers in sidebar */
+            }
+
+            .sidebar ul li {
+                font-size: 14px; /* Smaller font size in sidebar */
+            }
+        }
     </style>
 </head>
 <body>
@@ -208,12 +241,10 @@
 
             <h3>Industry Certifications</h3>
             <ul>
-                
-                <li><strong>Certified Ethical Hacker (CEH)</strong> - EC-Council</li>
-                <li><strong>AWS Certified Security - Specialty</strong> - Amazon Web Service (AWS)</li>
-                <li><strong>Ethical Hacking Essentials (EHE)</strong> - RedCode by EC-Council</li>
-                <li><strong>Network Defense Essentials (NDE)</strong> - RedCode by EC-Council</li>
-            
+                <li><strong>Certified Ethical Hacker (CEH)</strong>    EC-Council</li>
+                <li><strong>AWS Certified Security - Specialty</strong>   Amazon Web Service (AWS)</li>
+                <li><strong>Ethical Hacking Essentials (EHE)</strong>    RedCode by EC-Council</li>
+                <li><strong>Network Defense Essentials (NDE)</strong>   RedCode by EC-Council</li>
             </ul>
 
             <h3>Tech Stack</h3>
@@ -243,4 +274,5 @@
     </footer>
 </body>
 </html>
+
 
