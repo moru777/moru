@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity Resources</title>
+
+    <!-- Google Font: 'Poppins' for a modern sleek feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             background: #121212;
             color: #e0e0e0;
             margin: 0;
             padding: 20px;
+            animation: fadeInBody 1s ease-in;
         }
         h1 {
             color: #00e5ff;
@@ -26,6 +34,10 @@
         li {
             margin: 10px 0;
             font-size: 1rem;
+        }
+        li::before {
+            content: "🔒";
+            margin-right: 8px;
         }
         a {
             text-decoration: none;
@@ -48,6 +60,10 @@
             text-align: center;
             color: #00e5ff;
             font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
         }
         details {
             background: #1f1f1f;
@@ -55,7 +71,11 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            transition: box-shadow 0.3s;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: var(--delay, 0s);
         }
         details:hover {
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -71,13 +91,45 @@
             margin-top: 10px;
             color: #b0b0b0;
         }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            summary {
+                font-size: 1.1em;
+            }
+            li {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Choose a Resource:</h1>
 
     <div class="section">
-        <details>
+        <details style="--delay: .1s">
             <summary>Cybersecurity Events Worldwide 2025</summary>
             <p>Explore top cybersecurity events and hackathons across the globe:</p>
             <ul>
@@ -89,7 +141,7 @@
             </ul>
         </details>
 
-        <details>
+        <details style="--delay: .2s">
             <summary>Cybersecurity Events in Africa 2025</summary>
             <p>Stay updated with the latest cybersecurity conferences, workshops, and hackathons happening across Africa:</p>
             <ul>
@@ -100,44 +152,43 @@
             </ul>
         </details>
 
-        <details>
+        <details style="--delay: .3s">
             <summary>Advanced Cybersecurity Ebooks</summary>
             <p>Download free and premium eBooks covering various aspects of cybersecurity:</p>
             <ul>
-                <li><a href="https://www.amazon.com/Network-Security-Assessment-Chris-McNab/dp/149191095X" target="_blank">Network Security Assessment by Chris McNab</a> – Hands-on guide to penetration testing and network defense.</li>
-                <li><a href="https://www.nostarch.com/hacking2.htm" target="_blank">The Art of Exploitation (2nd Ed) by Jon Erickson</a> – Learn how hacking works at the code level.</li>
-                <li><a href="https://www.amazon.com/Blue-Team-Handbook-condensed-responder/dp/1500734756" target="_blank">Blue Team Handbook</a> – Incident response and defense for blue team professionals.</li>
-                <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Awesome Hacking Books (GitHub List)</a> – Curated list of top-rated cybersecurity and hacking books.</li>
-                <li><a href="https://www.sans.org/white-papers/" target="_blank">SANS Institute Whitepapers</a> – Research papers and eBooks on cybersecurity fundamentals and advanced topics.</li>
+                <li><a href="https://www.amazon.com/Network-Security-Assessment-Chris-McNab/dp/149191095X" target="_blank">Network Security Assessment by Chris McNab</a></li>
+                <li><a href="https://www.nostarch.com/hacking2.htm" target="_blank">The Art of Exploitation (2nd Ed) by Jon Erickson</a></li>
+                <li><a href="https://www.amazon.com/Blue-Team-Handbook-condensed-responder/dp/1500734756" target="_blank">Blue Team Handbook</a></li>
+                <li><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Awesome Hacking Books (GitHub List)</a></li>
+                <li><a href="https://www.sans.org/white-papers/" target="_blank">SANS Institute Whitepapers</a></li>
             </ul>
         </details>
 
-        <details>
+        <details style="--delay: .4s">
             <summary>Latest Cybersecurity Blog Articles</summary>
             <p>Explore insightful articles from cybersecurity professionals and enthusiasts:</p>
             <ul>
-                <li><a href="https://www.kaspersky.com/blog" target="_blank">Kaspersky Daily</a> – Latest cybersecurity trends and tips.</li>
-                <li><a href="https://www.schneier.com/" target="_blank">Schneier on Security</a> – Thought leadership by Bruce Schneier.</li>
-                <li><a href="https://blog.rapid7.com/" target="_blank">Rapid7 Blog</a> – Industry insights, vulnerability disclosures, and more.</li>
-                <li><a href="https://www.darkreading.com/" target="_blank">Dark Reading</a> – In-depth security news and analysis.</li>
-                <li><a href="https://blogs.cisco.com/security" target="_blank">Cisco Security Blog</a> – Corporate insights and technical breakdowns.</li>
+                <li><a href="https://www.kaspersky.com/blog" target="_blank">Kaspersky Daily</a></li>
+                <li><a href="https://www.schneier.com/" target="_blank">Schneier on Security</a></li>
+                <li><a href="https://blog.rapid7.com/" target="_blank">Rapid7 Blog</a></li>
+                <li><a href="https://www.darkreading.com/" target="_blank">Dark Reading</a></li>
+                <li><a href="https://blogs.cisco.com/security" target="_blank">Cisco Security Blog</a></li>
             </ul>
         </details>
 
-        <details>
+        <details style="--delay: .5s">
             <summary>Cybersecurity Practice Labs</summary>
             <p>Enhance your hands-on skills with interactive cybersecurity training labs and platforms:</p>
             <ul>
-                <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a> – Guided, gamified penetration testing labs for all skill levels.</li>
-                <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a> – Real-world hacking challenges in a lab environment.</li>
-                <li><a href="https://attackdefense.com/" target="_blank">AttackDefense</a> – Interactive labs for offensive security skills development.</li>
-                <li><a href="https://www.root-me.org/" target="_blank">Root Me</a> – Online platform for learning and practicing hacking techniques.</li>
-                <li><a href="https://www.cybrary.it/" target="_blank">Cybrary</a> – Cybersecurity training, certifications, and hands-on labs.</li>
+                <li><a href="https://tryhackme.com/" target="_blank">TryHackMe</a></li>
+                <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a></li>
+                <li><a href="https://attackdefense.com/" target="_blank">AttackDefense</a></li>
+                <li><a href="https://www.root-me.org/" target="_blank">Root Me</a></li>
+                <li><a href="https://www.cybrary.it/" target="_blank">Cybrary</a></li>
             </ul>
         </details>
 
         <a class="back-link" href="index.html">← Go Back to Home</a>
     </div>
-
 </body>
 </html>
