@@ -204,6 +204,25 @@
     }
   </style>
 </head>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          entry.target.style.setProperty('--animate-duration', '1.2s');
+          entry.target.style.setProperty('--animate-delay', '0.2s');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.sidebar-section').forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
 <body>
 
   <header data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">
